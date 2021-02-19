@@ -1,0 +1,227 @@
+doctype html
+html 
+    head
+        title Чупахин Роман
+        <link rel="shortcut icon" type="image/png" href="img/Roman.jpg">
+        style
+            include style.css
+            include sprites.css
+            include jquery-3.4.1.min.js
+            include img/Roman.jpg
+    body
+        .nav
+            .nav__wrap.wrap
+                a.nav__wrap-logo(href='#') <img src='img/logo.png'></img>
+                .nav__wrap-nav
+                    a.nav__wrap-nav-text(href='#').current home
+                    a.nav__wrap-nav-text(href='#service') service
+                    a.nav__wrap-nav-text(href='#about') about us
+                    a.nav__wrap-nav-text(href='#pricingtable') pricingtable
+                    a.nav__wrap-nav-text(href='#howitwork') howit work
+                    a.nav__wrap-nav-text(href='#happy') happy clients
+                    a.nav__wrap-nav-text(href='#contact') contact us
+                <img src="img/menu.png" class="menu hide"></img>
+        .home
+            .home__wrap.wrap
+                .home__wrap-text-theme boost up your local business
+                .home__wrap-text  Lorem Ipsum is simply dummy text of the printing and typesetting.Lorem Ipsum typesetting
+            form.home__form.wrap
+                .home__form-block-name
+                    input.home__form-input(type='text' placeholder='Full Name')
+                    .home__form-block-name-img
+                .home__form-block-email
+                    input.home__form-input(type='text' placeholder='Email Address')
+                    .home__form-block-email-img
+                .home__form-block-phone
+                    input.home__form-input(type='text' placeholder='Phone Number')
+                    .home__form-block-phone-img
+                button.btn request a quote
+            .slideshow-container.wrap
+                .mySlides.fade
+                    img.mySlides-img(src='img/computer.png')
+                .mySlides.fade
+                    img.mySlides-img(src='img/mack4.png')
+                .mySlides.fade
+                    img.mySlides-img(src='img/mack4.png')
+                div.slideshow-container-dot
+                    span.dot(onclick="currentSlide(1)")
+                    span.dot(onclick="currentSlide(2)")
+                    span.dot(onclick="currentSlide(3)")
+        .service
+            .service__wrap.wrap
+                .service__wrap-theme.home__wrap
+                    .service__wrap-theme-top.home__wrap-text-theme#service our services
+                    .service__wrap-theme-bottom.home__wrap-text Lorem Ipsum is simply dummy Business industry.
+                .service__wrap-theme-offers
+                    .service__wrap-theme-offers-block
+                        .service__wrap-theme-offers-block-img
+                        .service__wrap-theme-offers-block-text
+                            .service__wrap-theme-offers-block-text-top Font-Awesome Icons
+                            .service__wrap-theme-offers-block-text-bottom Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry.Lorem Isum has been the industrys standard dummy text ever since the 1500s, when an uknown printer.
+                    .service__wrap-theme-offers-block
+                        .service__wrap-theme-offers-block-gear
+                        .service__wrap-theme-offers-block-text
+                            .service__wrap-theme-offers-block-text-top Fully Responsive Design
+                            .service__wrap-theme-offers-block-text-bottom Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry.Lorem Isum has been the industrys standard dummy text ever since the 1500s, when an uknown printer.
+                    .service__wrap-theme-offers-block
+                        .service__wrap-theme-offers-block-cap
+                        .service__wrap-theme-offers-block-text
+                            .service__wrap-theme-offers-block-text-top Working Contact form
+                            .service__wrap-theme-offers-block-text-bottom Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry.Lorem Isum has been the industrys standard dummy text ever since the 1500s, when an uknown printer.
+                    .service__wrap-theme-offers-block
+                        .service__wrap-theme-offers-block-rocket
+                        .service__wrap-theme-offers-block-text
+                            .service__wrap-theme-offers-block-text-top Retina Ready icons here
+                            .service__wrap-theme-offers-block-text-bottom Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry.Lorem Isum has been the industrys standard dummy text ever since the 1500s, when an uknown printer.
+                    .service__wrap-theme-offers-block
+                        .service__wrap-theme-offers-block-circle
+                        .service__wrap-theme-offers-block-text
+                            .service__wrap-theme-offers-block-text-top Friendly Code
+                            .service__wrap-theme-offers-block-text-bottom Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry.Lorem Isum has been the industrys standard dummy text ever since the 1500s, when an uknown printer.
+                    .service__wrap-theme-offers-block
+                        .service__wrap-theme-offers-block-baks
+                        .service__wrap-theme-offers-block-text
+                            .service__wrap-theme-offers-block-text-top Flat trendy landing page Design
+                            .service__wrap-theme-offers-block-text-bottom Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry.Lorem Isum has been the industrys standard dummy text ever since the 1500s, when an uknown printer.
+        .about
+            img.about__img(src='img/about.png')
+            .about__block
+                .about__block_right
+                    .about__block_right-top#about about us
+                    .about__block_right-bottom Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry.Lorem Isum has been the industrys standard dummy text ever since the 1500s, when an uknown printer.Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry.Lorem Isum has been the industrys standard dummy text ever since the 1500s, when an uknown printer.
+                    .about__block_right-btn.btn read more
+        .pricingtable
+            .pricingtable__wrap.wrap
+                .pricingtable__wrap-theme.home__wrap
+                    .pricingtable__wrap-theme-top.home__wrap-text-theme#pricingtable choos your price
+                    .pricingtable__wrap-theme-bottom.home__wrap-text Lorem Ipsum is simply dummy text of the printing typesetting.
+                .pricingtable__wrap-offers
+                    .pricingtable__wrap-offers-block.pricingtable__wrap-offers-block-border
+                        .pricingtable__wrap-offers-block-plan basic plan
+                        .pricingtable__wrap-offers-block-price
+                            .pricingtable__wrap-offers-block-price-currency $
+                            .pricingtable__wrap-offers-block-price-number 22
+                            .pricingtable__wrap-offers-block-price-bottom per month
+                        hr.pricingtable__wrap-offers-block-hr
+                        .pricingtable__wrap-offers-block-inf 1 account
+                        hr.pricingtable__wrap-offers-block-hr
+                        .pricingtable__wrap-offers-block-inf 8 hour support
+                        hr.pricingtable__wrap-offers-block-hr
+                        .pricingtable__wrap-offers-block-inf custom cloud services
+                        .pricingtable__wrap-offers-block-btn.btn get started
+                    .pricingtable__wrap-offers-block.pricingtable__wrap-offers-block-premium
+                        .pricingtable__wrap-offers-block-plan.pricingtable__premium_white premium plan
+                        .pricingtable__wrap-offers-block-price
+                            .pricingtable__wrap-offers-block-price-baks.pricingtable__wrap-offers-block-price-currency $
+                            .pricingtable__wrap-offers-block-price-number.pricingtable__premium_white  42
+                            .pricingtable__wrap-offers-block-price-bottom.pricingtable__premium_white per month
+                        hr.pricingtable__wrap-offers-block-hr.pricingtable__premium-hr
+                        .pricingtable__wrap-offers-block-inf.pricingtable__premium-blue 2 account
+                        hr.pricingtable__wrap-offers-block-hr.pricingtable__premium-hr
+                        .pricingtable__wrap-offers-block-inf.pricingtable__premium-blue 100mb storage
+                        hr.pricingtable__wrap-offers-block-hr.pricingtable__premium-hr
+                        .pricingtable__wrap-offers-block-inf.pricingtable__premium-blue custom cloud services
+                        .pricingtable__wrap-offers-block-btn.btn get started                   
+                    .pricingtable__wrap-offers-block.pricingtable__wrap-offers-block-bor
+                        .pricingtable__wrap-offers-block-plan gold plan
+                        .pricingtable__wrap-offers-block-price
+                            .pricingtable__wrap-offers-block-price-currency $
+                            .pricingtable__wrap-offers-block-price-number 62
+                            .pricingtable__wrap-offers-block-price-bottom per month
+                        hr.pricingtable__wrap-offers-block-hr
+                        .pricingtable__wrap-offers-block-inf 8 account
+                        hr.pricingtable__wrap-offers-block-hr
+                        .pricingtable__wrap-offers-block-inf 24 hour support
+                        hr.pricingtable__wrap-offers-block-hr
+                        .pricingtable__wrap-offers-block-inf custom cloud services 
+                        .pricingtable__wrap-offers-block-btn.btn get started
+        .how
+            .how__wrap.wrap
+                .how__wrap-theme.home__wrap
+                    .how__wrap-theme-top.home__wrap-text-theme#howitwork how it works
+                    .how__wrap-theme-bottom.home__wrap-text Lorem Ipsum is simply dummy Business industry
+                .how__wrap-boks
+                    .how__wrap-boks-block
+                        .how__wrap-boks-block-step1
+                        .how__wrap-boks-block-top step 1
+                        .how__wrap-boks-block-bottom Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry.Lorem Ipsum has been
+                    .how__wrap-boks-block
+                        .how__wrap-boks-block-step2
+                        .how__wrap-boks-block-top step 2
+                        .how__wrap-boks-block-bottom Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry.Lorem Ipsum has been
+                    .how__wrap-boks-block
+                        .how__wrap-boks-block-step3
+                        .how__wrap-boks-block-top step 3
+                        .how__wrap-boks-block-bottom Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry.Lorem Ipsum has been
+                    .how__wrap-boks-block
+                        .how__wrap-boks-block-step4
+                        .how__wrap-boks-block-top step 4
+                        .how__wrap-boks-block-bottom Lorem Ipsum is simply dummy text of the printing and typesetting ind ustry.Lorem Ipsum has been
+                .how__wrap-btn.btn Get start Now
+        .happy
+            .happy__wrap.wrap
+                .happy__wrap-theme.home__wrap
+                    .happy__wrap-theme-top.home__wrap-text-theme#happy happy clients
+                    .happy__wrap-theme-bottom.home__wrap-tecxt We are explain who is using our business solutions
+                .happy__wrap-boks
+                    .happy__wrap-boks-block
+                        .happy__wrap-boks-block-img
+                        .happy__wrap-boks-block-text
+                            .happy__wrap-boks-block-text-comment <span class='ld'>&ldquo;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make. <span class="rd"> &bdquo;</span>
+                            .happy__wrap-boks-block-text-name Darwin Michle, <span class="blue">Project manager</span>  
+                    .happy__wrap-boks-block
+                        .happy__wrap-boks-block-img
+                        .happy__wrap-boks-block-text
+                            .happy__wrap-boks-block-text-comment <span class='ld'>&ldquo;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make. <span class="rd"> &bdquo;</span>
+                            .happy__wrap-boks-block-text-name Madam Elisabath,<span class="blue"> Creative Director</span> 
+                    .happy__wrap-boks-block
+                        .happy__wrap-boks-block-img
+                        .happy__wrap-boks-block-text
+                            .happy__wrap-boks-block-text-comment <span class='ld'>&ldquo;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make. <span class="rd"> &bdquo;</span>
+                            .happy__wrap-boks-block-text-name Clips arter,<span class="blue"> Lipsum directer</span> 
+                    .happy__wrap-boks-block
+                        .happy__wrap-boks-block-img
+                        .happy__wrap-boks-block-text
+                            .happy__wrap-boks-block-text-comment <span class='ld'>&ldquo;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make. <span class="rd"> &bdquo;</span>
+                            .happy__wrap-boks-block-text-name zam cristafr,<span class="blue">  manager</span> 
+        .new
+            .new__wrap.wrap
+                .new__wrap-theme.home__wrap
+                    .new__wrap-theme-top.home__wrap-text-theme#contact newsletter
+                    .new__wrap-theme-bottom.home__wrap-tecxt  Lorem Ipsum is simply dummy Business industry
+                form.new__wrap-form.home__form.wrap
+                    .new__wrap-form-name.home__form-block-name
+                        input.new__wrap-form-name-input.home__form-input(type='text' placeholder='Name')
+                        .home__form-block-name-img
+                    .new__wrap-form-email.home__form-block-email
+                        input.new__wrap-form-email-input.home__form-input(type='text' placeholder='Email Address')
+                        .new__wrap-form-email.home__form-block-email-img
+                    button.new__wrap-btn.btn request a quote
+            .new__wrap-map.wrap
+                .new__wrap-map-block
+                    .new__wrap-map-block-theme address
+                    .new__wrap-map-block-text Business street
+                    .new__wrap-map-block-text Secound north section
+                    .new__wrap-map-block-text Bavani nagar.88769
+                    a.new__wrap-map-block-a(href='tel:+987-9976-999') Call: +987-9976-999
+                    a.new__wrap-map-block-email(href='mailto:info@businessface.com')  info@businessface.com 
+                a.new__wrap-map-logo(href='#') <img src='img/logo.png'></img>
+        footer.footer.wrap
+            .footer__wrap.nav__wrap-nav
+                a.footer__wrap-a.nav__wrap-nav-text(href='#') home
+                a.footer__wrap-a.nav__wrap-nav-text(href='#service') service
+                a.footer__wrap-a.nav__wrap-nav-text(href='#about') about us
+                a.footer__wrap-a.nav__wrap-nav-text(href='#pricingtable') pricingtable
+                a.footer__wrap-a.nav__wrap-nav-text(href='#howitwork') howitwork
+                a.footer__wrap-a.nav__wrap-nav-text(href='#happy') happyclients
+                a.footer__wrap-a.nav__wrap-nav-text(href='#contact') contact us
+            .footer__wrap-phone
+                .footer__wrap-number-img
+                a.footer__wrap-number-number(href='tel: +987 9976 999')  +987 9976 999 
+            .footer__wrap-social
+                a.footer__wrap-social-twiter(href="#")
+                a.footer__wrap-social-f(href="#")
+                a.footer__wrap-social-google(href="#")
+                a.footer__wrap-social-linked(href="#")
+    script
+            include code.js

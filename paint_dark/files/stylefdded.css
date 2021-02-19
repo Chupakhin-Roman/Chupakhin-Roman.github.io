@@ -1,0 +1,217 @@
+.otzovik img {
+    margin: 0 auto;
+}
+.block-1 {
+    padding: 20px;
+    text-transform: uppercase;
+    background: url(b12b461.jpg) no-repeat center top;
+    height: 914px;
+}
+.block-1 ul li {
+    padding: 0 0 32px 70px;
+    font-size: 19px;
+}
+.block-1 ul li:before {
+    content: '';
+    position: absolute;
+    background: url(li-top05a9a.png) no-repeat center top;
+    width: 48px;
+    height: 48px;
+    left: 0;  
+}
+.block-1 ul li:nth-child(2):before {
+    background-position: 0px -80px;
+}
+.block-1 ul li:nth-child(3):before {
+    background-position: 0px -160px;
+}
+.block-1 .container{
+    padding: 450px 0 0 0;
+}
+.price {
+    text-align: center;
+    font: 14px 'Museo Sans Cyrl';
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    margin: 10px 0 20px;
+}
+.price div {
+    display: inline-block;
+    width: 46%;
+    vertical-align: top;
+    color: #222222;
+}
+.price span, .price s {
+    font-size: 44px;
+}
+.price .old-price {
+    padding-right: 15px;
+	margin-right:10px;
+    text-align: right;
+    box-sizing: border-box;
+}
+.price .new { 
+    text-align: left; 
+    padding-left: 25px;
+	    border-left: 2px solid #bfbfbf;
+}
+    
+.block-2{
+  background: #0066cc;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 19px;
+}
+.block-2.white {
+  background: #fff;
+  color: #222;
+}
+.block-2.green {
+  background: #66cc00;
+  color: #fff;
+}
+.block-2.green p span {
+    font-weight: bold;
+}
+.block-2 h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.block-2 h2.white {
+  color: #fff;
+}
+p.info {
+    margin-top: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.block-2 li {
+    line-height: 26px;
+    position: relative;
+    float: left;
+    width: 192px;
+    text-align: center;
+    color: #fff;
+    margin: 0 14px 30px;
+}
+.block-2 li img {
+    border-radius: 20px;
+}
+.block-2 li h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.block-2.howorder {
+  font-size: 16px;
+}
+.block-3 {
+    padding: 0;
+}
+.block-5{
+    position: relative;
+    padding: 15px 0;
+    background: #f6f6f6;
+}
+.block-5 .container {
+    padding: 20px 25px 10px 25px;
+}
+.block-5 .price {
+    margin-top: 35px;
+}
+.block-8 li,.block-10 li{
+    position: relative;
+    float: left;
+  width: 50%;
+  height: 275px;
+  padding: 0 15px;
+  text-align: center;
+  font: 500 16px 'Museo Sans Cyrl';
+  text-transform: uppercase;
+  position: relative;
+}
+.block-7{
+  padding-top: 30px;
+  background: #fff;
+}
+.block-7 h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.block-7 p{
+  font-size: 18px;
+  color: #333333;
+  line-height: 24px;
+  padding: 0 20px 5px;
+  margin: 20px 0;
+  text-align: center;
+}
+.block-7 h3 {
+    background: #6c0;
+    padding: 15px 0;
+    border-radius: 10px;
+}
+.block-9{
+  padding-top:30px;
+  background: url(grey992e6.jpg) repeat center top;
+}
+.block-9 h2{
+  padding:0 20px;
+  line-height: 32px;
+}
+.block-9 h3{
+  color: #222222;
+}
+.block-9 p {
+  color: #222222;
+  font-size: 18px;
+  margin: 15px 0;
+  text-align: center;
+}
+.block-9 .slide-vk {
+  width: 440px;
+  margin: 25px auto 0;
+}
+.block-9 .slide-vk img {
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.block-12{
+  background: url(b129430c.jpg) no-repeat top center;
+}
+.block-12 .container {
+    padding-top: 474px;
+}
+.section.block-12 {
+   padding: 40px 20px 0px;
+}
+.block-12 .price div {
+    color: #fff;
+}
+.m1-form{
+  padding: 30px 20px;
+}
+.footer{
+  padding: 20px 0;
+  background: #fff;
+}
+.footer a{
+  color: #234161;
+  font:13px 'Museo Sans Cyrl'; 
+}
+.video-container {
+    position: relative;
+    width: 480px;
+    height: 260px;
+    overflow: hidden;
+    margin: 0px auto;
+}
+.video-container iframe, .video-container object, .video-container embed{
+    position:absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}

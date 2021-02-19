@@ -1,0 +1,2498 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Тритон</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="description" content="" />
+
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png" />
+
+  <link rel="manifest" href="img/favicon/manifest.json" />
+  <link rel="stylesheet" href="./css/easy-styles.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="./img/favicon/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+  <script>
+    if (!window.jQuery) {
+      document.write(
+        '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"><\/script>'
+      );
+    }
+  </script>
+  <script src="shared_files/js/custom-functions2.min.js?28" defer=""></script>
+  <script data-pagespeed-no-defer="">
+    (function () {
+      function f(a, b, d) {
+        if (a.addEventListener) a.addEventListener(b, d, !1);
+        else if (a.attachEvent) a.attachEvent("on" + b, d);
+        else {
+          var c = a["on" + b];
+          a["on" + b] = function () {
+            d.call(this);
+            c && c.call(this);
+          };
+        }
+      }
+      window.pagespeed = window.pagespeed || {};
+      var g = window.pagespeed;
+      function k(a) {
+        this.g = [];
+        this.f = 0;
+        this.h = !1;
+        this.j = a;
+        this.i = null;
+        this.l = 0;
+        this.b = !1;
+        this.a = 0;
+      }
+      function l(a, b) {
+        var d = b.getAttribute("data-pagespeed-lazy-position");
+        if (d) return parseInt(d, 0);
+        var d = b.offsetTop,
+          c = b.offsetParent;
+        c && (d += l(a, c));
+        d = Math.max(d, 0);
+        b.setAttribute("data-pagespeed-lazy-position", d);
+        return d;
+      }
+      function m(a, b) {
+        var d, c, e;
+        if (!a.b && (0 == b.offsetHeight || 0 == b.offsetWidth)) return !1;
+        a: if (b.currentStyle) c = b.currentStyle.position;
+        else {
+          if (
+            document.defaultView &&
+            document.defaultView.getComputedStyle &&
+            (c = document.defaultView.getComputedStyle(b, null))
+          ) {
+            c = c.getPropertyValue("position");
+            break a;
+          }
+          c = b.style && b.style.position ? b.style.position : "";
+        }
+        if ("relative" == c) return !0;
+        e = 0;
+        "discount_hourber" == typeof window.pageYOffset
+          ? (e = window.pageYOffset)
+          : document.body && document.body.scrollTop
+            ? (e = document.body.scrollTop)
+            : document.documentElement &&
+            document.documentElement.scrollTop &&
+            (e = document.documentElement.scrollTop);
+        d =
+          window.innerHeight ||
+          document.documentElement.clientHeight ||
+          document.body.clientHeight;
+        c = e;
+        e = e + d;
+        var h = b.getBoundingClientRect();
+        h
+          ? ((e = h.top - d), (c = h.bottom))
+          : ((h = l(a, b)),
+            (d = h + b.offsetHeight),
+            (e = h - e),
+            (c = d - c));
+        return e <= a.f && 0 <= c + a.f;
+      }
+      k.prototype.m = function (a) {
+        p(a);
+        var b = this;
+        window.setTimeout(function () {
+          var d = a.getAttribute("data-pagespeed-lazy-src");
+          if (d)
+            if ((b.h || m(b, a)) && -1 != a.src.indexOf(b.j)) {
+              var c = a.parentNode,
+                e = a.nextSibling;
+              c && c.removeChild(a);
+              a.c && (a.getAttribute = a.c);
+              a.removeAttribute("onload");
+              a.tagName &&
+                "IMG" == a.tagName &&
+                g.CriticalImages &&
+                f(a, "load", function () {
+                  g.CriticalImages.checkImageForCriticality(this);
+                  b.b &&
+                    (b.a--,
+                      0 == b.a && g.CriticalImages.checkCriticalImages());
+                });
+              a.removeAttribute("data-pagespeed-lazy-src");
+              a.removeAttribute("data-pagespeed-lazy-replaced-functions");
+              c && c.insertBefore(a, e);
+              if ((c = a.getAttribute("data-pagespeed-lazy-srcset")))
+                (a.srcset = c),
+                  a.removeAttribute("data-pagespeed-lazy-srcset");
+              a.src = d;
+            } else b.g.push(a);
+        }, 0);
+      };
+      k.prototype.loadIfVisibleAndMaybeBeacon = k.prototype.m;
+      k.prototype.s = function () {
+        this.h = !0;
+        q(this);
+      };
+      k.prototype.loadAllImages = k.prototype.s;
+      function q(a) {
+        var b = a.g,
+          d = b.length;
+        a.g = [];
+        for (var c = 0; c < d; ++c) a.m(b[c]);
+      }
+      function t(a, b) {
+        return a.a ? null != a.a(b) : null != a.getAttribute(b);
+      }
+      k.prototype.u = function () {
+        for (
+          var a = document.getElementsByTagName("img"), b = 0, d;
+          (d = a[b]);
+          b++
+        )
+          t(d, "data-pagespeed-lazy-src") && p(d);
+      };
+      k.prototype.overrideAttributeFunctions = k.prototype.u;
+      function p(a) {
+        t(a, "data-pagespeed-lazy-replaced-functions") ||
+          ((a.c = a.getAttribute),
+            (a.getAttribute = function (a) {
+              "src" == a.toLowerCase() &&
+                t(this, "data-pagespeed-lazy-src") &&
+                (a = "data-pagespeed-lazy-src");
+              return this.c(a);
+            }),
+            a.setAttribute("data-pagespeed-lazy-replaced-functions", "1"));
+      }
+      g.o = function (a, b) {
+        function d() {
+          if (!((c.b && a) || c.i)) {
+            var b = 200;
+            200 < new Date().getTime() - c.l && (b = 0);
+            c.i = window.setTimeout(function () {
+              c.l = new Date().getTime();
+              q(c);
+              c.i = null;
+            }, b);
+          }
+        }
+        var c = new k(b);
+        g.lazyLoadImages = c;
+        f(window, "load", function () {
+          c.b = !0;
+          c.h = a;
+          c.f = 200;
+          if (g.CriticalImages) {
+            for (
+              var b = 0, d = document.getElementsByTagName("img"), r = 0, n;
+              (n = d[r]);
+              r++
+            )
+              -1 != n.src.indexOf(c.j) &&
+                t(n, "data-pagespeed-lazy-src") &&
+                b++;
+            c.a = b;
+            0 == c.a && g.CriticalImages.checkCriticalImages();
+          }
+          q(c);
+        });
+        0 != b.indexOf("data") && (new Image().src = b);
+        f(window, "scroll", d);
+        f(window, "resize", d);
+      };
+      g.lazyLoadInit = g.o;
+    })();
+
+    pagespeed.lazyLoadInit(true, "/pagespeed_static/1.JiBnMqyl6S.gif");
+  </script>
+
+  <!-- FORM -->
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://s2snow.com/d.js"></script>
+
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+      $("input[name=ckm_request_id]").val(ckm_request_id);
+
+    });
+
+  </script>
+  <script type="text/javascript" src='js/ckm_form2.js'></script>
+  <script type="text/javascript" src='js/ckm_form3.js'></script>
+  <script type="text/javascript" src='js/ckm_form4.js'></script>
+  <script type="text/javascript" src='js/ckm_form5.js'></script>
+  <!-- <script type="text/javascript">
+    CKM.change_page = function (url) {
+      window.location = window.location.origin + "/lander/thankyou/page_triton.html";
+    };
+  </script> -->
+</head>
+
+<body>
+  <!-- <script type="text/javascript" src="https://s2snow.com/?a=304&c=133&m=3&cp=js"></script> -->
+
+  <div class="popup_easy_background">
+    <div class="popup_easy_content">
+      <div class="popup_easy_wrap">
+        <div class="popup_easy_close">×</div>
+        <div class="popup_easy_image_wrap">
+          <img class="popup_easy_image" src="img/pantogor-whis-bg.png" alt="some" />
+        </div>
+        <form id="ckm_form" action="#" method="post" class="popupform_easy_form changeaction">
+          <input type="hidden" name="ckm_offer_id" value="122" />
+          <input type="hidden" name="ckm_request_id" />
+          <input type="hidden" name="address" />
+          <input type="hidden" name="city" />
+          <input type="hidden" name="ckm_bp" value="1" />
+          <h3 class="popupform_easy_h3">
+            Внимание! Акция действует только на территории России
+          </h3>
+          <p class="popupform_easy_p">
+            Успейте оформить заказ по выгодной промо-цене
+          </p>
+          <div class="popupform_easy_wrap">
+            <div class="popupform_easy_old">
+              Обычная цена:
+              <span class="popupform_easy_h2">0</span>
+            </div>
+            <div class="popupform_easy_new">
+              Промо цена:
+              <h2 class="popupform_easy_span">0</h2>
+            </div>
+          </div>
+
+          <span class="popupform_easy_inputtitle">Введите Ваше имя</span>
+          <input class="popupform_easy_input form-control mb-2 form-control-lg" type="text" name="first_name"
+            maxlength="25" placeholder="Имя" required />
+
+          <span class="popupform_easy_inputtitle">Введите Ваш телефон</span>
+          <input class="popupform_easy_input form-control mb-2 form-control-lg input_phone" type="text"
+            name="phone_cell" placeholder="+7 (916) 123-45-67" oninvalid="this.setCustomValidity('Неправильный номер.')"
+            onchange="try{setCustomValidity('')}catch(e){}" oninput="setCustomValidity(' ')" required />
+          <input class="popupform_easy_button btn primary uppercase" type="submit" value="Заказать" />
+          <p class='form-p'>*при заказе курса</p>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <header>
+      <div class="top-line">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="tl-block">
+                <div class="top-logo">
+                  <a href="#form"><img src="img/logo.png" alt="Тритон" /></a>
+                </div>
+                <div class="top-slogan hidden-xs hidden-sm">
+                  <div class="top-slogan__item item02">
+                    <i class="demo-icon icn-gardening" data-style="flex-shrink: 0;"></i>
+                    <span>100% натуральный<br />состав</span>
+                  </div>
+                  <div class="top-slogan__item item03">
+                    <i class="demo-icon icn-sale-sticker" data-style="flex-shrink: 0;"></i>
+                    <span>75% скидка<br />только сегодня</span>
+                  </div>
+                </div>
+                <div class="clock-block hidden-xs hidden-sm">
+                  <div class="clock-header">До конца акции осталось:</div>
+                  <div class="clock-top"></div>
+                </div>
+                <div class="top-btn hidden-xs">
+                  <a href="#form" class=" btn call-form">Заказать звонок</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h1>Замучила боль в суставах, избавьтесь от неё</h1>
+              <div class="under-header">
+                Тритон вернет вас к
+                полноценной жизни!
+              </div>
+            </div>
+          </div>
+          <div class="row list-form">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class="list-ok">
+                <ul class="list-ok-items">
+                  <li>
+                    <img src="img/arrow-right.png" alt="list" />
+                    <span>Помогает при артрите и артрозе</span>
+                  </li>
+                  <li>
+                    <img src="img/arrow-right.png" alt="list" /><span>Не просто снимает боль, а устраняет причину
+                      заболевания</span>
+                  </li>
+                  <li>
+                    <img src="img/arrow-right.png" alt="list" /><span>Активирует природные силы организма за счет
+                      натурального состава</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class="form form1 clearfix">
+                <img src="img/pantogor-whis-bg.png" alt="Тритон" class="pack" />
+                <div class="order-form">
+                  <form id="ckm_form2" action="#" method="post" class="popupform_easy_form changeaction">
+                    <input type="hidden" name="ckm_offer_id" value="122" />
+                    <input type="hidden" name="ckm_request_id" />
+                    <input type="hidden" name="address" />
+                    <input type="hidden" name="city" />
+                    <input type="hidden" name="ckm_bp" value="1" />
+                    <h3 class="popupform_easy_h3">
+                      Внимание! Акция действует только на территории России
+                    </h3>
+                    <p class="popupform_easy_p">
+                      Успейте оформить заказ по выгодной промо-цене
+                    </p>
+                    <div class="popupform_easy_wrap">
+                      <div class="popupform_easy_old">
+                        Обычная цена:
+                        <span class="popupform_easy_h2">0</span>
+                      </div>
+                      <div class="popupform_easy_new">
+                        Промо цена:
+                        <h2 class="popupform_easy_span">0</h2>
+                      </div>
+                    </div>
+
+                    <span class="popupform_easy_inputtitle">Введите Ваше имя</span>
+                    <input class="popupform_easy_input form-control mb-2 form-control-lg" type="text" name="first_name"
+                      maxlength="25" placeholder="Имя" required />
+                    <span class="popupform_easy_inputtitle">Введите Ваш телефон</span>
+                    <input class="popupform_easy_input form-control mb-2 form-control-lg input_phone" type="text"
+                      name="phone_cell" placeholder="+7 (916) 123-45-67"
+                      oninvalid="this.setCustomValidity('Неправильный номер.')"
+                      onchange="try{setCustomValidity('')}catch(e){}" oninput="setCustomValidity(' ')" required />
+                    <input class="popupform_easy_button btn primary uppercase" type="submit" value="Заказать" />
+                    <p class='form-p'>*при заказе курса</p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="medal-line">
+                <img data-pagespeed-lazy-src="img/medal01.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                  onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                  onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                <img data-pagespeed-lazy-src="img/medal02.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                  onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                  onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                <img data-pagespeed-lazy-src="img/medal03.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                  onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                  onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+              </div>
+            </div>
+          </div>
+          <div class="row pain">
+            <div class="col-md-12 col-lg-12">
+              <h2 class="red">
+                Болезни суставов приводят к параличу и инвалидности!
+              </h2>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+              <div class="pain-item">
+                <div class="pain-item__img">
+                  <img data-pagespeed-lazy-src="img/pain01.png"
+                    alt="Болезни суставов приводят к параличу и инвалидности!" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                    onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                    onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                </div>
+                <div class="pain-item__text">
+                  Невыносимая боль и деформация костей - это лишь некоторые
+                  симптомы заболеваний суставов
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+              <div class="pain-item">
+                <div class="pain-item__img">
+                  <img data-pagespeed-lazy-src="img/pain02.png"
+                    alt="Болезни суставов приводят к параличу и инвалидности!" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                    onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                    onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                </div>
+                <div class="pain-item__text">
+                  Запущенный артрит и артроз приводит человека к параличу и
+                  инвалидности, превращая его жизнь в ад
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+              <div class="pain-item">
+                <div class="pain-item__img">
+                  <img data-pagespeed-lazy-src="img/pain03.png"
+                    alt="Болезни суставов приводят к параличу и инвалидности!" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                    onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                    onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                </div>
+                <div class="pain-item__text">
+                  Полная потеря дееспособности и жизнь без надежды на будущее
+                  - вот, что вам грозит, если вы не позаботитесь о своих
+                  суставах!
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="hfooter yellow">
+                Жить полноценной жизнью или провести остаток своих дней в
+                инвалидном кресле - решать вам!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="causes">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h2>
+                Большое количество людей в мире страдают болезнями суставов
+              </h2>
+              <div class="s-under-line">
+                А вы уверены, что не входите в их число?
+              </div>
+              <p>
+                Все причины болезней суставов не известны даже врачам.
+                Основной из них считается нарушение в работе человеческой
+                иммунной системы. Однако есть несколько факторов, которые
+                повышают риск появления и развития болезней суставов:
+              </p>
+            </div>
+          </div>
+          <div class="row causes-table row-flex">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+              <div class="causes-item">
+                <ul class="causes-item-list">
+                  <li>
+                    <img data-pagespeed-lazy-src="img/warning.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                      onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                      onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                    <span>Возрастные изменения</span>
+                  </li>
+                  <li>
+                    <img data-pagespeed-lazy-src="img/warning.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                      onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                      onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                    <span>Инфекции, вызванные различными вирусами и
+                      бактериями</span>
+                  </li>
+                  <li>
+                    <img data-pagespeed-lazy-src="img/warning.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                      onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                      onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                    <span>Нарушение обмена веществ</span>
+                  </li>
+                  <li>
+                    <img data-pagespeed-lazy-src="img/warning.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                      onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                      onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                    <span>Травмы</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+              <div class="causes-item">
+                <ul class="causes-item-list">
+                  <li>
+                    <img data-pagespeed-lazy-src="img/warning.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                      onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                      onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                    <span>Недостаток витаминов</span>
+                  </li>
+                  <li>
+                    <img data-pagespeed-lazy-src="img/warning.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                      onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                      onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                    <span>Болезни нервной системы</span>
+                  </li>
+                  <li>
+                    <img data-pagespeed-lazy-src="img/warning.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                      onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                      onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                    <span>Снижение иммунитета</span>
+                  </li>
+                  <li>
+                    <img data-pagespeed-lazy-src="img/warning.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                      onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                      onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                    <span>Неправильное питание</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+              <div class="causes-item">
+                <ul class="causes-item-list">
+                  <li>
+                    <img data-pagespeed-lazy-src="img/warning.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                      onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                      onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                    <span>Избыточный вес</span>
+                  </li>
+                  <li>
+                    <img data-pagespeed-lazy-src="img/warning.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                      onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                      onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                    <span>Нарушения в работе эндокринной системы</span>
+                  </li>
+                  <li>
+                    <img data-pagespeed-lazy-src="img/warning.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                      onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                      onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                    <span>Генетическая предрасположенность</span>
+                  </li>
+                  <li>
+                    <img data-pagespeed-lazy-src="img/warning.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                      onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                      onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                    <span>Переохлаждение</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s-order-form">
+        <h2 class="hidden-xs hidden-sm hidden-md hidden-lg">Форма заявки</h2>
+        <div class="container">
+          <div class="row order-row">
+            <img src="img/pantogor-whis-bg.png" alt="Тритон" class="pack hidden-xs order-row-img" />
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class="or-line-top">
+                <div class="conditions-text red">
+                  <span>Внимание! Акция действует только на территории России</span>
+                </div>
+                <div class="clock-block">
+                  <div class="clock-header">До конца акции осталось:</div>
+                  <div class="discount_hour"></div>
+                </div>
+              </div>
+              <div class="or-line-bottom">
+                <div class="conditions-price">
+                  <div class="old-price">
+                    <span class="title">Обычная цена:</span>
+                    <span class="cost"><span class="price_land_s4">0</span>
+                      <span class="price_land_curr"></span></span>
+                  </div>
+                  <div class="price red">
+                    <span class="title">Промо-цена:</span>
+                    <span class="cost"><span class="price_land_s1">0</span>
+                      <span class="price_land_curr"></span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <img src="img/pantogor-whis-bg.png" alt="Тритон" class="pack hidden-xs" /> -->
+            <!-- <img src="img/sale.png" alt="Тритон" class="sale" id='form' /> -->
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <form id="ckm_form3" action="#" method="post" class="popupform_easy_form changeaction">
+                <input type="hidden" name="ckm_offer_id" value="122" />
+                <input type="hidden" name="ckm_request_id" />
+                <input type="hidden" name="address" />
+                <input type="hidden" name="city" />
+                <input type="hidden" name="ckm_bp" value="1" />
+                <p class="popupform_easy_p">
+                  Успейте оформить заказ по выгодной промо-цене
+                </p>
+                <div class="popupform_easy_wrap popupform_easy_hide1000">
+                  <div class="popupform_easy_old">
+                    Обычная цена:
+                    <span class="popupform_easy_h2">0</span>
+                  </div>
+                  <div class="popupform_easy_new">
+                    Промо цена:
+                    <h2 class="popupform_easy_span">0</h2>
+                  </div>
+                </div>
+
+                <span class="popupform_easy_inputtitle">Введите Ваше имя</span>
+                <input class="popupform_easy_input form-control mb-2 form-control-lg" type="text" name="first_name"
+                  maxlength="25" placeholder="Имя" required />
+
+                <span class="popupform_easy_inputtitle">Введите Ваш телефон</span>
+                <input class="popupform_easy_input form-control mb-2 form-control-lg input_phone" type="text"
+                  name="phone_cell" placeholder="+7 (916) 123-45-67"
+                  oninvalid="this.setCustomValidity('Неправильный номер.')"
+                  onchange="try{setCustomValidity('')}catch(e){}" oninput="setCustomValidity(' ')" required />
+                <input class="popupform_easy_button btn primary uppercase" type="submit" value="Заказать" />
+                <p class='form-p'>*при заказе курса</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="distinction">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h2>Чем отличается гель Тритон от других средств?</h2>
+            </div>
+          </div>
+          <div class="row distinction-row">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+              <div class="distinction-img">
+                <img data-pagespeed-lazy-src="img/distinction01.png" alt="Чем отличается гель Тритон от других средств"
+                  src="pagespeed_static/1.JiBnMqyl6S.gif"
+                  onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                  onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+              <div class="distinction-text">
+                Гель <span class="bold">Тритон</span> отличается от всех
+                остальных средств тем, что не просто временно снимает боль в
+                суставах, а в первую очередь - устраняет саму причину
+                заболевания за счет активации природных сил организма и
+                синергического действия натуральных компонентов
+              </div>
+            </div>
+          </div>
+          <div class="row distinction-row">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+              <div class="distinction-img">
+                <img data-pagespeed-lazy-src="img/distinction02.png" alt="Чем отличается гель Тритон от других средств"
+                  src="pagespeed_static/1.JiBnMqyl6S.gif"
+                  onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                  onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+              <div class="distinction-text">
+                Основные компоненты геля
+                <span class="bold">Тритон</span>
+                останавливают дальнейшее разрушение суставов без побочных
+                эффектов и вреда для здоровья
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s-order-form">
+        <h2 class="hidden-xs hidden-sm hidden-md hidden-lg">Форма заявки</h2>
+        <div class="container" id='form'>
+          <div class="row order-row">
+            <img src="img/pantogor-whis-bg.png" alt="Тритон" class="pack hidden-xs order-row-img" />
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+              <div class="or-line-top">
+                <div class="conditions-text red">
+                  <span>Внимание! Акция действует только на территории России</span>
+                </div>
+                <div class="clock-block">
+                  <div class="clock-header">До конца акции осталось:</div>
+                  <div class="discount_hour"></div>
+                </div>
+              </div>
+              <div class="or-line-bottom">
+                <div class="conditions-price">
+                  <div class="old-price">
+                    <span class="title">Обычная цена:</span>
+                    <span class="cost"><span class="price_land_s4">0</span>
+                      <span class="price_land_curr"></span></span>
+                  </div>
+                  <div class="price red">
+                    <span class="title">Промо-цена:</span>
+                    <span class="cost"><span class="price_land_s1">0</span>
+                      <span class="price_land_curr"></span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <img src="img/pantogor-whis-bg.png" alt="Тритон" class="pack hidden-xs" />
+            <img src="img/sale.png" alt="Тритон" class="sale" /> -->
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <form id="ckm_form4" action="#" method="post" class="popupform_easy_form changeaction">
+                <input type="hidden" name="ckm_offer_id" value="122" />
+                <input type="hidden" name="ckm_request_id" />
+                <input type="hidden" name="address" />
+                <input type="hidden" name="city" />
+                <input type="hidden" name="ckm_bp" value="1" />
+                <p class="popupform_easy_p">
+                  Успейте оформить заказ по выгодной промо-цене
+                </p>
+                <div class="popupform_easy_wrap popupform_easy_hide1000">
+                  <div class="popupform_easy_old">
+                    Обычная цена:
+                    <span class="popupform_easy_h2">0</span>
+                  </div>
+                  <div class="popupform_easy_new">
+                    Промо цена:
+                    <h2 class="popupform_easy_span">0</h2>
+                  </div>
+                </div>
+
+                <span class="popupform_easy_inputtitle">Введите Ваше имя</span>
+                <input class="popupform_easy_input form-control mb-2 form-control-lg" type="text" name="first_name"
+                  maxlength="25" placeholder="Имя" required />
+
+                <span class="popupform_easy_inputtitle">Введите Ваш телефон</span>
+                <input class="popupform_easy_input form-control mb-2 form-control-lg input_phone" type="text"
+                  name="phone_cell" placeholder="+7 (916) 123-45-67"
+                  oninvalid="this.setCustomValidity('Неправильный номер.')"
+                  onchange="try{setCustomValidity('')}catch(e){}" oninput="setCustomValidity(' ')" required />
+                <input class="popupform_easy_button btn primary uppercase" type="submit" value="Заказать" />
+                <p class='form-p'>*при заказе курса</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h2>Отзывы людей, которые уже использовали Тритон</h2>
+            </div>
+          </div>
+        </div>
+        <!--
+<div class="video-reviews">
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+<div class="video-block">
+<video style="width: 100%; height: 220px; max-height: 100%; min-height: 220px;">
+<source src="pantogor/videos/pantogor1.mp4" type='video/mp4'>
+</video>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+<div class="video-block">
+<video style="width: 100%; height: 220px; max-height: 100%; min-height: 220px;">
+<source src="pantogor/videos/pantogor3.mp4" type='video/mp4'>
+</video>
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+<div class="video-block">
+<video style="width: 100%; height: 220px; max-height: 100%; min-height: 220px;">
+<source src="pantogor/videos/pantogor2.mp4" type='video/mp4'>
+</video>
+</div>
+</div>
+</div>
+</div>
+</div>
+-->
+        <div class="text-reviews">
+          <div class="container">
+            <div class="row">
+              <div
+                class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
+                <div class="text-reviews__items owl-carousel">
+                  <div class="tr-item">
+                    <div class="tr-item__text">
+                      <div class="tr-header">
+                        Елена Сергеевна, 47 лет, Киров
+                      </div>
+                      <div class="tr-body">
+                        Добрый день! Причиной моих проблем с суставами стала
+                        травма колена, которую я получила несколько лет назад,
+                        когда попала в аварию. Долго лечила. Через некоторое
+                        время после того, как вылечила колено, у меня при
+                        резкой смене погоды, начала появляться тупая боль в
+                        том месте, где раньше была трещина. Колено начало
+                        краснеть. Многие лекарства мне пить нельзя, потому что
+                        на большинство химических препаратов у меня аллергия.
+                        Решили с мужем поискать решение проблемы в интернете.
+                        Нашли Тритон. Прочитали все на сайте. Для меня самое
+                        главное, что без химии. Еще заинтересовало то, что
+                        гель не просто боль снимает, а заставляет организм
+                        самовосстанавливаться. Заказала гель с запасом, потому
+                        что он больше продаваться не будет. Пользуюсь уже
+                        около месяца. Очень нравится результат, боли больше
+                        нет. Буду проходить курс до конца.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tr-item">
+                    <div class="tr-item__text">
+                      <div class="tr-header">
+                        Владимир Анатольевич, 52 года, Москва
+                      </div>
+                      <div class="tr-body">
+                        Здравствуйте! У меня был инфекционный артрит из-за
+                        перенесенного в свое время туберкулеза. Сначала у меня
+                        начало ломить руки, они стали сильно. Я пил
+                        обезболивающие таблетки, но эффекта хватало ненадолго.
+                        Мне сказали, что надо устранять причину болезни -
+                        воспаление суставов, а не просто снимать боль. Дело
+                        серьезное, так и инвалидом можно остаться. Никакую
+                        химию я не признаю в принципе своем, поэтому решил
+                        искать средство на натуральной основе. Нашел в
+                        интернете гель Тритон, прочитал все на сайте. Меня
+                        все устроило. Мало того, что гель состоит только из
+                        натуральных компонентов, еще и включает в себя панты
+                        яд кобры. Я читал про них, что они обладают
+                        очень целебными свойствами. Заказал, доставили быстро.
+                        Мажу больные места две недели. Очень доволен. Боль
+                        перестала беспокоить, как только начал мазать. Сейчас
+                        вообще ничего не болит и почти не ломит. Буду
+                        проходить курс до самого конца.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tr-item">
+                    <div class="tr-item__text">
+                      <div class="tr-header">
+                        Ирина Сергеевна, 60 лет, Обнинск
+                      </div>
+                      <div class="tr-body">
+                        Добрый день! У меня артрит уже 7 лет. Из рук все
+                        падало, потому что из-за боли было очень тяжело
+                        удержать что-то в руках. Сильная боль мучила в ночные
+                        часы, даже спать было невозможно. Дочка мне нашла в
+                        интернете гель Тритон, сказала, что на натуральной
+                        основе и из пант яд кобры, которые обладают
+                        особыми целебными свойствами. Мы вместе изучили всю
+                        информацию на сайте. Я заинтересовалась. Опять же
+                        написано было, что он продается ограниченной серией, и
+                        больше в продажу поступать не будет. Заказала сразу 20
+                        упаковок, чтобы 5 на курсовой прием хватило. Остальные
+                        на всякий случай. Прошла курс - 45 дней.
+                        Обезболивающий эффект проявился очень быстро.
+                        Постепенно стали проходить руки и коленки. Перестала
+                        просыпаться от боли по ночам. Очень рекомендую всем с
+                        такими же проблемами купить средство, пока оно есть в
+                        продаже.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--
+<div class="audio-reviews">
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<h2>Послушайте аудиоотзывы клиентов, уже использовавших Тритон</h2>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<div class="audio-block">
+<div class="audio-title">
+Валентина Сергеевна — 60 лет
+</div>
+<audio controls="">
+<source src="pantogor/media/audio-reviews-01.mp3" type="audio/mp3">
+</audio>
+<div class="audio-title">
+Елизавета Алексеевна — 55 лет
+</div>
+<audio controls="">
+<source src="pantogor/media/audio-reviews-02.mp3" type="audio/mp3">
+</audio>
+<div class="audio-title">
+Сергей Алексеевич — 60 лет
+</div>
+<audio controls="">
+<source src="pantogor/media/audio-reviews-03.mp3" type="audio/mp3">
+</audio>
+</div>
+</div>
+</div>
+</div>
+</div>
+<-->
+      </section>
+      <section class="faq">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h2>Часто задаваемые вопросы наших клиентов</h2>
+            </div>
+          </div>
+          <div class="row block-faq">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <ul class="faq-list">
+                <li>
+                  <div class="question">
+                    <span>У меня болит тазобедренный сустав? Сможет ли Тритон
+                      снять боль без вреда для здоровья</span>
+                  </div>
+                  <div class="answer">
+                    Тритон сможет снять боль без побочных эффектов, так как
+                    все компоненты средства были протестированы Всемирной
+                    организацией по борьбе с болезнями суставов. В результате
+                    этого в Тритоне не было обнаружено химических элементов,
+                    которые могли бы нанести хотя бы малейший вред здоровью.
+                  </div>
+                </li>
+                <li>
+                  <div class="question">
+                    <span>У меня на большинство препаратов аллергия. Есть ли у
+                      Тритона противопоказания и побочные эффекты?</span>
+                  </div>
+                  <div class="answer">
+                    Гель Тритон состоит исключительно из натуральных и
+                    экологически чистых компонентов, которые тщательно
+                    отбирались учеными. Они прошли все необходимые клинические
+                    испытания, в которых принимали участие 2500 человек. Ни у
+                    кого из них не было выявлено ни одного побочного эффекта и
+                    аллергической реакции.
+                  </div>
+                </li>
+                <li>
+                  <div class="question">
+                    <span>У моего папы артрит. У него болят и немеют пальцы на
+                      руках. Поможет ли ему Тритон?</span>
+                  </div>
+                  <div class="answer">
+                    Да. Тритон помогает при разных стадиях артрита благодаря
+                    уникального сочетанию пант яд кобры с редчайшими
+                    натуральными компонентами. Также Тритон помогает при
+                    артрите и артрозе локтевого сустава, суставов пальцев ног,
+                    плечевого и коленного суставов.
+                  </div>
+                </li>
+                <li>
+                  <div class="question">
+                    <span>Скажите, пожалуйста, чем отличается Тритон от других
+                      средств?</span>
+                  </div>
+                  <div class="answer">
+                    В Тритон входят уникальные панты яд кобры,
+                    которые были найдены в горах у тихоокеанского побережья
+                    Канады. Ученые Всемирной организации по борьбе с болезнями
+                    суставов после долгих опытов добавили в гель Тритон
+                    редчайшие компоненты, благодаря которым в организме
+                    запускается процесс регенерации поврежденных тканей без
+                    вреда для здоровья.
+                  </div>
+                </li>
+                <li>
+                  <div class="question">
+                    <span>Сколько нужно использовать Тритон, чтобы прошли боль
+                      и покраснение?</span>
+                  </div>
+                  <div class="answer">
+                    Тритон необходимо использовать не реже двух-трех раз в
+                    день. Очень важно не пропускать ни дня, чтобы добиться
+                    максимального эффекта. При соблюдении инструкции по
+                    применению геля Тритон от боли и воспаления удастся
+                    избавиться в первые 10 дней. Для полного восстановления
+                    суставов и хрящевой ткани необходимо пройти полный курс
+                    геля Тритон - не менее 30-45 дней.
+                  </div>
+                </li>
+                <li>
+                  <div class="question">
+                    <span>Сколько хранится гель Тритон?</span>
+                  </div>
+                  <div class="answer">
+                    Срок годности геля Тритон - 2 года. Гель Тритон
+                    необходимо хранить при температуре не более 25 °C, избегая
+                    попадания прямых солнечных лучей.
+                  </div>
+                </li>
+                <li>
+                  <div class="question">
+                    <span>Как правильно пользоваться гелем Тритон?</span>
+                  </div>
+                  <div class="answer">
+                    Нужно выдавить небольшое количество геля на руку, нанести
+                    его тонким слоем на проблемное место и втирать легкими
+                    круговыми движениями, пока он полностью не впитается в
+                    кожу. Процедуру необходимо повторять 2-3 раза в день в
+                    течение 30-45 дней.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="how">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h2>Как применять Тритон?</h2>
+            </div>
+          </div>
+          <div class="row">
+            <!-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+              <div class="how-item">
+                <div class="how-img">
+                  <img data-pagespeed-lazy-src="img/how-01.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                    onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                    onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                </div>
+                <div class="how-text">
+                  Выдавите небольшое количество геля на руку
+                </div>
+                <img data-pagespeed-lazy-src="img/how-arrow.png" alt="Тритон" class="how-arrow"
+                  src="pagespeed_static/1.JiBnMqyl6S.gif"
+                  onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                  onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+              </div>
+            </div> -->
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-6">
+              <div class="how-item">
+                <div class="how-img">
+                  <img data-pagespeed-lazy-src="img/how-02.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                    onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                    onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                </div>
+                <div class="how-text">
+                  Нанесите гель тонким слоем на проблемное место и втирайте
+                  круговыми движениями
+                </div>
+                <img data-pagespeed-lazy-src="img/how-arrow.png" alt="Тритон" class="how-arrow"
+                  src="pagespeed_static/1.JiBnMqyl6S.gif"
+                  onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                  onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class="how-item last">
+                <div class="how-img">
+                  <img data-pagespeed-lazy-src="img/how-03.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                    onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                    onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                </div>
+                <div class="how-text">
+                  Применяйте 2-3 раза в день в течение 30-45 дней
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="team">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h2>Наши специалисты работают для вас!</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <div class="team-item">
+                <div class="team-photo">
+                  <img data-pagespeed-lazy-src="img/ilin.png" alt="Александр Ильин"
+                    src="pagespeed_static/1.JiBnMqyl6S.gif"
+                    onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                    onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                </div>
+                <div class="team-name">
+                  Директор по работе с клиентами <br />Александр Ильин
+                </div>
+                <div class="team-descr">
+                  Отвечает за достоверность информации, предоставляемой
+                  клиенту
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <div class="team-item">
+                <div class="team-photo">
+                  <img data-pagespeed-lazy-src="img/ilichev.png" alt="Леонид Ильичев"
+                    src="pagespeed_static/1.JiBnMqyl6S.gif"
+                    onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                    onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                </div>
+                <div class="team-name">
+                  Директор колл-центра <br />Леонид Ильичев
+                </div>
+                <div class="team-descr">
+                  Отвечает за качество консультации и своевременную связь с
+                  клиентом
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <div class="team-item">
+                <div class="team-photo">
+                  <img data-pagespeed-lazy-src="img/sergeev.png" alt="Алексей Сергеев"
+                    src="pagespeed_static/1.JiBnMqyl6S.gif"
+                    onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                    onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                </div>
+                <div class="team-name">
+                  Директор по логистике <br />Алексей Сергеев
+                </div>
+                <div class="team-descr">
+                  Отвечает за сроки и адрес доставки
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <div class="team-item">
+                <div class="team-photo">
+                  <img data-pagespeed-lazy-src="img/semenova.png" alt="Наталья Семенова"
+                    src="pagespeed_static/1.JiBnMqyl6S.gif"
+                    onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                    onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                </div>
+                <div class="team-name">
+                  Директор по качеству <br />Наталья Семенова
+                </div>
+                <div class="team-descr">
+                  Отвечает за оригинальность и качество препарата
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="delivery">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h2>Как оформить заказ и получить гель Тритон?</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+              <div class="delivery-item first">
+                <div class="delivery-img">
+                  <i class="demo-icon icn-hand"></i>
+                </div>
+                <div class="delivery-text">
+                  Вы оставляете заявку на нашем сайте
+                </div>
+                <img data-pagespeed-lazy-src="img/how-arrow.png" alt="Тритон" class="delivery-arrow"
+                  src="pagespeed_static/1.JiBnMqyl6S.gif"
+                  onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                  onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+              <div class="delivery-item second">
+                <div class="delivery-img">
+                  <i class="demo-icon icn-phone-call"></i>
+                </div>
+                <div class="delivery-text">
+                  Специалист колл-центра связывается с Вами для подтверждения
+                  заказа
+                </div>
+                <img data-pagespeed-lazy-src="img/how-arrow.png" alt="Тритон" class="delivery-arrow"
+                  src="pagespeed_static/1.JiBnMqyl6S.gif"
+                  onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                  onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-push-6 col-sm-6 col-md-push-0 col-md-3 col-lg-push-0 col-lg-3">
+              <div class="delivery-item third">
+                <div class="delivery-img">
+                  <i class="demo-icon icn-logistics-delivery-truck-in-movement"></i>
+                </div>
+                <div class="delivery-text">Мы отправляем Ваш заказ</div>
+                <img data-pagespeed-lazy-src="img/how-arrow.png" alt="Тритон" class="delivery-arrow"
+                  src="pagespeed_static/1.JiBnMqyl6S.gif"
+                  onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                  onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-pull-6 col-sm-6 col-md-pull-0 col-md-3 col-lg-pull-0 col-lg-3">
+              <div class="delivery-item fourth">
+                <div class="delivery-img">
+                  <i class="demo-icon icn-shake-hands"></i>
+                </div>
+                <div class="delivery-text">
+                  Вы принимаете заказ и оплачиваете его только после получения
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="delivery-map hidden-xs">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h2>Мы доставим Ваш заказ в любую точку России!</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="dmap">
+                <img data-pagespeed-lazy-src="img/xmap.png.pagespeed.ic.EO6276K4IB.png" alt="Тритон"
+                  src="pagespeed_static/1.JiBnMqyl6S.gif"
+                  onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                  onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="warning">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h2>
+                Если вас замучила боль в суставах, избавьтесь от нее с Тритоном!
+              </h2>
+              <p>
+                Универсальный гель вернет вас к
+                полноценной жизни!
+              </p>
+            </div>
+          </div>
+          <div class="row warning-border">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <p>
+                Пока вы тянете время, шансов на избавление от болезней
+                суставов становится все меньше и меньше! С каждым днем все
+                сложнее терпеть невыносимую боль! Так стоит ли дожидаться
+                того, пока процесс станет необратимым, если проблему можно
+                решить сегодня?
+              </p>
+              <p class="red">
+                Гель Тритон предоставляется ограниченной серией. Больше
+                товар в продажу поступать не будет!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bottom-form">
+        <h2 class="hidden-xs hidden-sm hidden-md hidden-lg">
+          Форма внизу страницы
+        </h2>
+        <h2>Отзывы клиентов</h2>
+        <div class='comment'>
+          <div class="comment_1">
+            <img src="img/3.gif" alt="" class='comment_img'>
+            <p class="comment_p">Не буду долго рассказывать, я знаю, что Тритон помогает. Попробовала сама, рекомендую
+              всем. Считаю, что просто обязана всем рассказать о этом чуде. Врачи рекомендовали операцию, я со страху и
+              заказала Тритон, ящерицу увидела, вспомнила как мальчишки хвосты им отрывали, и ведь они опять отрастали.
+              Вот у меня, что-то отросло))) отложили операцию. Спасибо </p>
+          </div>
+          <div class="comment_2">
+            <img src="img/2.jpg" alt="" class='comment_img'>
+            <p class="comment_p"> Тритон принимала курсовым лечение. Я промазала 40 дней на коленный сустав. У меня был
+              артрит который мучал меня последний 6 лет. Острые боли у меня наблюдались на протяжении 3х лет. Сейчас
+              ничего не беспокоит. Я действительно забыла по эти боли. Теперь решила заказать для отца. Надеюсь на такой
+              же эффект не знаю если в его возрасте это возможно!</p>
+          </div>
+          <div class="comment_3">
+            <img src="img/1.jpg" alt="" class='comment_img'>
+            <p class="comment_p">
+              Привет, всем читающим! Не очень люблю писать о болячках и лекарствах, но иногда
+              понимаю, что возможно мой опыт и моя информация кому-то окажется полезной, поэтому сегодня отзыв о
+              лекарственном препарате для лечения суставов Тритон. Я очень многое пробовала не хотела прибегать к
+              хирургическому вмешательству, боюсь операции, да и возраст не тот искала решения, не кто не рекомендовал
+              сама нашла и решила попробовать!!! За 2 месяца моя жизнь кардинально изменилась, я забыла о боли в
+              суставах и начала радоваться жизни. Тритон всем рекомендую</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row list-form">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 hidden-xs hidden-sm">
+              <div class="list-ok">
+                <ul class="list-ok-items">
+                  <li>
+                    <img src="img/arrow-right.png" alt="list" /><span>Содержит уникальные компоненты - желчь рептилий и
+                      экстракт яда кобры</span>
+                  </li>
+                  <li>
+                    <img src="img/arrow-right.png" alt="list" /><span>Помогает при артрите и артрозе</span>
+                  </li>
+                  <li>
+                    <img src="img/arrow-right.png" alt="list" /><span>Активирует природные силы организма за счет
+                      натурального состава</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class="form bottom clearfix form1">
+                <img src="img/pantogor-whis-bg.png" alt="Тритон" class="pack hidden-xs" />
+                <div class="order-form order-form1">
+                  <form id="ckm_form5" action="#" method="post" class="popupform_easy_form changeaction">
+                    <input type="hidden" name="ckm_offer_id" value="122" />
+                    <input type="hidden" name="ckm_request_id" />
+                    <input type="hidden" name="address" />
+                    <input type="hidden" name="city" />
+                    <input type="hidden" name="ckm_bp" value="1" />
+                    <h3 class="popupform_easy_h3">
+                      Внимание! Акция действует только на территории России
+                    </h3>
+                    <p class="popupform_easy_p">
+                      Успейте оформить заказ по выгодной промо-цене
+                    </p>
+                    <div class="popupform_easy_wrap">
+                      <div class="popupform_easy_old">
+                        Обычная цена:
+                        <span class="popupform_easy_h2">0</span>
+                      </div>
+                      <div class="popupform_easy_new">
+                        Промо цена:
+                        <h2 class="popupform_easy_span">0</h2>
+                      </div>
+                    </div>
+
+                    <span class="popupform_easy_inputtitle">Введите Ваше имя</span>
+                    <input class="popupform_easy_input form-control mb-2 form-control-lg" type="text" name="first_name"
+                      maxlength="25" placeholder="Имя" required />
+
+                    <span class="popupform_easy_inputtitle">Введите Ваш телефон</span>
+                    <input class="popupform_easy_input form-control mb-2 form-control-lg input_phone" type="text"
+                      name="phone_cell" placeholder="+7 (916) 123-45-67"
+                      oninvalid="this.setCustomValidity('Неправильный номер.')"
+                      onchange="try{setCustomValidity('')}catch(e){}" oninput="setCustomValidity(' ')" required />
+                    <input class="popupform_easy_button btn primary uppercase" type="submit" value="Заказать" />
+                    <p class='form-p'>*при заказе курса</p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="medal-line">
+                <img data-pagespeed-lazy-src="img/medal01.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                  onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                  onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                <img data-pagespeed-lazy-src="img/medal02.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                  onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                  onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+                <img data-pagespeed-lazy-src="img/medal03.png" alt="Тритон" src="pagespeed_static/1.JiBnMqyl6S.gif"
+                  onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                  onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row footer-row">
+          <div class="colxs-12 col-sm-12 col-md-12 col-lg-12 text-center" style="text-align: center">
+            <rekv>НаноЭкспоТрейд<br />Москва, Россия, ул. Земляной Вал, 18/22, оф. 225 <br />
+              ИНН: 326043457755</rekv><br />
+            <a href="#" modal="polit">Политика конфиденциальности</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="hidden">
+      <div class="container pu-send-form" id="pu-form">
+        <div class="row order-row">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="or-line-top">
+              <div class="conditions-text red">
+                <span>Внимание! Акция действует только на территории России</span>
+              </div>
+              <div class="clock-block">
+                <div class="clock-header">До конца акции осталось:</div>
+                <div class="discount_hour"></div>
+              </div>
+            </div>
+            <div class="or-line-bottom">
+              <div class="conditions-price">
+                <div class="old-price">
+                  <span class="title">Обычная цена:</span>
+                  <span class="cost"><span class="price_land_s4">0</span>
+                    <span class="price_land_curr"></span></span>
+                </div>
+                <div class="price red">
+                  <span class="title">Промо-цена:</span>
+                  <span class="cost"><span class="price_land_s1">0</span>
+                    <span class="price_land_curr"></span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img src="img/pantogor-whis-bg.png" alt="Тритон" class="pack hidden-xs" />
+          <img src="img/sale.png" alt="Тритон" class="sale" />
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <!-- <form action="{offer}" method="post" class="popupform_easy_form">
+              <input type="hidden" name="ckm_offer_id" value="122" />
+              <input type="hidden" name="ckm_request_id" />
+              <h3 class="popupform_easy_h3">
+                Внимание! Акция действует только на территории России
+              </h3>
+              <p class="popupform_easy_p">
+                Успейте оформить заказ по выгодной промо-цене
+              </p>
+              <div class="popupform_easy_wrap popupform_easy_hide1000">
+                <div class="popupform_easy_old">
+                  Обычная цена:
+                  <span class="popupform_easy_h2">0</span>
+                </div>
+                <div class="popupform_easy_new">
+                  Промо цена:
+                  <h2 class="popupform_easy_span">0</h2>
+                </div>
+              </div>
+
+              <span class="popupform_easy_inputtitle">Введите Ваше имя</span>
+              <input class="row popupform_easy_input" type="text" name="first_name" maxlength="25"
+                placeholder="Иванова И. И." />
+
+              <span class="popupform_easy_inputtitle">Введите Ваш телефон</span>
+              <input class="row popupform_easy_input" type="tel" name="phone_cell" placeholder="+7 (916) 123-45-67" />
+
+              <input type="submit" value="Заказать" class="popupform_easy_button" />
+            </form> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="show-message"></div>
+  <script type="text/javascript" data-pagespeed-no-defer="">
+    pagespeed.lazyLoadImages.overrideAttributeFunctions();
+  </script>
+  <script data-pagespeed-no-defer="">
+    (function () {
+      function d(b) {
+        var a = window;
+        if (a.addEventListener) a.addEventListener("load", b, !1);
+        else if (a.attachEvent) a.attachEvent("onload", b);
+        else {
+          var c = a.onload;
+          a.onload = function () {
+            b.call(this);
+            c && c.call(this);
+          };
+        }
+      }
+      var p =
+        Date.now ||
+        function () {
+          return +new Date();
+        };
+      window.pagespeed = window.pagespeed || {};
+      var q = window.pagespeed;
+      function r() {
+        this.a = !0;
+      }
+      r.prototype.c = function (b) {
+        b = parseInt(b.substring(0, b.indexOf(" ")), 10);
+        return !isNaN(b) && b <= p();
+      };
+      r.prototype.hasExpired = r.prototype.c;
+      r.prototype.b = function (b) {
+        return b.substring(b.indexOf(" ", b.indexOf(" ") + 1) + 1);
+      };
+      r.prototype.getData = r.prototype.b;
+      r.prototype.f = function (b) {
+        var a = document.getElementsByTagName("script"),
+          a = a[a.length - 1];
+        a.parentNode.replaceChild(b, a);
+      };
+      r.prototype.replaceLastScript = r.prototype.f;
+      r.prototype.g = function (b) {
+        var a = window.localStorage.getItem("pagespeed_lsc_url:" + b),
+          c = document.createElement(a ? "style" : "link");
+        a && !this.c(a)
+          ? ((c.type = "text/css"),
+            c.appendChild(document.createTextNode(this.b(a))))
+          : ((c.rel = "stylesheet"), (c.href = b), (this.a = !0));
+        this.f(c);
+      };
+      r.prototype.inlineCss = r.prototype.g;
+      r.prototype.h = function (b, a) {
+        var c = window.localStorage.getItem(
+          "pagespeed_lsc_url:" + b + " pagespeed_lsc_hash:" + a
+        ),
+          f = document.createElement("img");
+        c && !this.c(c) ? (f.src = this.b(c)) : ((f.src = b), (this.a = !0));
+        for (var c = 2, k = arguments.length; c < k; ++c) {
+          var g = arguments[c].indexOf("=");
+          f.setAttribute(
+            arguments[c].substring(0, g),
+            arguments[c].substring(g + 1)
+          );
+        }
+        this.f(f);
+      };
+      r.prototype.inlineImg = r.prototype.h;
+      function t(b, a, c, f) {
+        a = document.getElementsByTagName(a);
+        for (var k = 0, g = a.length; k < g; ++k) {
+          var e = a[k],
+            m = e.getAttribute("data-pagespeed-lsc-hash"),
+            h = e.getAttribute("data-pagespeed-lsc-url");
+          if (m && h) {
+            h = "pagespeed_lsc_url:" + h;
+            c && (h += " pagespeed_lsc_hash:" + m);
+            var l = e.getAttribute("data-pagespeed-lsc-expiry"),
+              l = l ? new Date(l).getTime() : "",
+              e = f(e);
+            if (!e) {
+              var n = window.localStorage.getItem(h);
+              n && (e = b.b(n));
+            }
+            e &&
+              (window.localStorage.setItem(h, l + " " + m + " " + e),
+                (b.a = !0));
+          }
+        }
+      }
+      function u(b) {
+        t(b, "img", !0, function (a) {
+          return a.src;
+        });
+        t(b, "style", !1, function (a) {
+          return a.firstChild ? a.firstChild.nodeValue : null;
+        });
+      }
+      q.i = function () {
+        if (window.localStorage) {
+          var b = new r();
+          q.localStorageCache = b;
+          d(function () {
+            u(b);
+          });
+          d(function () {
+            if (b.a) {
+              for (
+                var a = [],
+                c = [],
+                f = 0,
+                k = p(),
+                g = 0,
+                e = window.localStorage.length;
+                g < e;
+                ++g
+              ) {
+                var m = window.localStorage.key(g);
+                if (!m.indexOf("pagespeed_lsc_url:")) {
+                  var h = window.localStorage.getItem(m),
+                    l = h.indexOf(" "),
+                    n = parseInt(h.substring(0, l), 10);
+                  if (!isNaN(n))
+                    if (n <= k) {
+                      a.push(m);
+                      continue;
+                    } else if (n < f || 0 == f) f = n;
+                  c.push(h.substring(l + 1, h.indexOf(" ", l + 1)));
+                }
+              }
+              k = "";
+              f && (k = "; expires=" + new Date(f).toUTCString());
+              document.cookie = "_GPSLSC=" + c.join("!") + k;
+              g = 0;
+              for (e = a.length; g < e; ++g)
+                window.localStorage.removeItem(a[g]);
+              b.a = !1;
+            }
+          });
+        }
+      };
+      q.localStorageCacheInit = q.i;
+    })();
+    pagespeed.localStorageCacheInit();
+  </script>
+  <link rel="stylesheet" href="css/A.main.css.pagespeed.cf.YUmZRqjGBJ.css" />
+  <style data-pagespeed-lsc-url="{offer}" data-pagespeed-lsc-hash="sdzdbCyfe4"
+    data-pagespeed-lsc-expiry="Thu, 21 Nov 2030 04:49:42 GMT">
+    @charset "UTF-8";
+
+    @font-face {
+      font-family: OpenSansBold;
+      src: url(fonts/OpenSansBold/OpenSansBold.eot);
+      src: url(fonts/OpenSansBold/OpenSansBold-1.eot) format("embedded-opentype"),
+        url(fonts/OpenSansBold/OpenSansBold.woff) format("woff"),
+        url(fonts/OpenSansBold/OpenSansBold.ttf) format("truetype");
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: OpenSansRegular;
+      src: url(fonts/OpenSansRegular/OpenSansRegular.eot);
+      src: url(fonts/OpenSansRegular/OpenSansRegular-1.eot) format("embedded-opentype"),
+        url(fonts/OpenSansRegular/OpenSansRegular.woff) format("woff"),
+        url(fonts/OpenSansRegular/OpenSansRegular.ttf) format("truetype");
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: icon-font;
+      src: url(fonts/iconfont/icon-font.eot);
+      src: url(fonts/iconfont/icon-font.eot) format("embedded-opentype"),
+        url(fonts/iconfont/icon-font.woff2) format("woff2"),
+        url(fonts/iconfont/icon-font.woff) format("woff"),
+        url(fonts/iconfont/icon-font.ttf) format("truetype"),
+        url(fonts/iconfont/icon-font.svg) format("svg");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    [class*=" icn-"]:before,
+    [class^="icn-"]:before {
+      font-family: icon-font;
+      font-style: normal;
+      font-weight: 400;
+      speak: none;
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: 0.2em;
+      text-align: center;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1em;
+      margin-left: 0.2em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .icn-gardening:before {
+      content: "\e800";
+    }
+
+    .icn-hand:before {
+      content: "\e801";
+    }
+
+    .icn-left-arrow:before {
+      content: "\e802";
+    }
+
+    .icn-logistics-delivery-truck-in-movement:before {
+      content: "\e803";
+    }
+
+    .icn-microscope:before {
+      content: "\e804";
+    }
+
+    .icn-phone-call:before {
+      content: "\e805";
+    }
+
+    .icn-right-arrow:before {
+      content: "\e806";
+    }
+
+    .icn-sale-sticker:before {
+      content: "\e807";
+    }
+
+    .icn-shake-hands:before {
+      content: "\e808";
+    }
+
+    .icn-warning:before {
+      content: "\e809";
+    }
+  </style>
+  <link rel="stylesheet" href="css/flipclock.min.css" />
+  <link rel="stylesheet" href="css/A.popup.min.css.pagespeed.cf.iAJSEmy36s.css" />
+  <link rel="stylesheet" href="css/A.magnific-popup.min.css.pagespeed.cf.XLQo-C-WDC.css" />
+  <link rel="stylesheet" href="css/A.owl.carousel.min.css.pagespeed.cf.Gaw0VVClML.css" />
+  <link rel="stylesheet" href="css/plyr.min.css" />
+  <link rel="stylesheet" href="css/A.style.min.css.pagespeed.cf.SiDBRt2Bwu.css" />
+  <script src="js/flipclock.min.js"></script>
+  <script src="js/popup.min.js.pagespeed.jm.-q-R_YFl8F.js"></script>
+  <script src="js/plyr.min.js jquery.magnific-popup.min.js.pagespeed.jc.9ddNdNmH_b.js"></script>
+  <script>
+    eval(mod_pagespeed_XaJmqrvxoc);
+  </script>
+  <script>
+    eval(mod_pagespeed_hr4XVzGccf);
+  </script>
+  <script
+    src="js,_owl.carousel.min.js js,_main.min.js shared_files,_js,_hide.js shared_files,_js,_phone_placeholder.js.pagespeed.jc.O4M3yr_HZV.js"></script>
+  <script>
+    eval(mod_pagespeed_Ig1UINWhi3);
+  </script>
+  <script>
+    eval(mod_pagespeed_RJfV3I$M43);
+  </script>
+  <script>
+    eval(mod_pagespeed_q9CvX$$TOU);
+  </script>
+  <script>
+    eval(mod_pagespeed_87LUJ_Fcur);
+  </script>
+  <link href="shared_files/css/A.custom-styles2.min.css,q6.pagespeed.cf.NytKlidF_7.css" type="text/css"
+    rel="stylesheet" />
+  <script src="shared_files/js/sisyphus.min.js,qv=2.pagespeed.jm.wDJKflVUDC.js" defer=""></script>
+  <script src="shared_files/js/form.custom.min.js?v=7" defer=""></script>
+  <div id="polit" class="modal">
+    <div class="modal-block">
+      <div class="icon-close"></div>
+      <div class="title">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</div>
+      <div class="content">
+        <div class="padding">
+          <p>
+            Наш интернет-магазин уважительно относится к правам клиента.
+            Соблюдается строгая конфиденциальность при оформлении заказа.
+            Сведения надёжно сохраняются и защищены от передачи.
+          </p>
+          <p>
+            Согласием на обработку данных клиента исключительно с целью
+            оказания услуг является размещение заказа на сайте.
+          </p>
+          <p>
+            К персональным данным относится личная информация о клиенте:
+            домашний адрес; имя, фамилия, отчество; сведения о рождении;
+            имущественное, семейное положение; личные контакты (телефон,
+            электронная почта) и прочие сведения, которые перечислены в Законе
+            РФ № 152-ФЗ «О персональных данных» от 27 июля 2006 г.
+          </p>
+          <p>
+            Клиент вправе отказаться от обработки персональных данных. Нами в
+            данном случае гарантируется удаление с сайта всех персональных
+            данных в трёхдневный срок в рабочее время. Подобный отказ клиент
+            может оформить простым электронным письмом на адрес
+            info@slaviya-org.com.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="agreement" class="modal">
+    <div class="modal-block">
+      <div class="icon-close"></div>
+      <div class="title">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</div>
+      <div class="content">
+        <div class="padding">
+          <p>
+            Настоящее пользовательское соглашение заключается между Вами –
+            Клиентом, Рекламодателем и СРА - сетью.
+          </p>
+          <p>
+            <b>Клиент</b> – лицо, которое посредством деятельности CPA-сети,
+            привлекаемое методами продвижения, на приобретение/отчуждение
+            оферов на товары и/или услуги, предлагаемые Рекламодателем,
+            имеющие намерение заказать или приобрести либо заказывающий,
+            приобретающий или использующий товары исключительно для личных,
+            семейных, домашних и иных нужд, не связанных с осуществлением
+            предпринимательской деятельности.
+          </p>
+          <p>
+            <b>Рекламодатель</b> – лицо, которое желает разместить офер в
+            CPA-сети, с целью отчуждения определенного товара и/или услуги.
+          </p>
+          <p>
+            <b>CPA-сеть</b> (сокращение от Cost Per Action, то есть оплата за
+            действие) – электронная среда деловой активности, в процессе
+            которой между Рекламодателем и СРА-сетью складываются договорные
+            взаимоотношения, в силу которых, Рекламодатель предлагает оферы на
+            товар и/или услугу, а СРА-сеть, в свою очередь, привлекает
+            клиентов, заинтересованных в приобретении оферов, разрешёнными
+            Рекламодателем методами. Конечным результатом такой активности,
+            является приобретение товара и/или услуги Клиентом, посредством
+            CPA-сети.
+          </p>
+          <p><b>Стороны</b> – Клиент, Рекламодатель, CPA-сеть.</p>
+          <p>
+            <b>Сайт</b> – интернет ресурс интернет-магазина, имеющий доменное
+            имя n.pantogor-new.ru, пребывающий под организационным управлением
+            и принадлежащий Рекламодателю, на условиях права частной
+            собственности.
+          </p>
+          <p>
+            <b>Публичная оферта</b> – адресованное администрацией
+            неопределенному кругу лиц или нескольким конкретным лицам
+            предложение, которое определенно, конкретно и выражает намерение
+            лица, сделавшего предложение, считать себя заключившим данное
+            пользовательское соглашение с адресатом, которым будет принято
+            предложение.
+          </p>
+          <p>
+            <b>Акцепт</b> – полное принятие одной из Сторон условий публичной
+            оферты СРА-сети на заключение данного пользовательского
+            соглашения. Акцептированием публичной оферты происходит в момент
+            начала пользования Сайтом (в том числе в ознакомительных целях) и
+            его сервисами (услугами).
+          </p>
+          <p class="no-margin"><b>1. Общие положения</b></p>
+          <p class="no-margin">
+            1.1. Настоящее Пользовательское соглашение (далее по тексту –
+            «Соглашение») определяет общие правила посещения, использования
+            сервисов и нормы общего поведения на Сайте Клиентом и регулирует
+            гражданско-правовые взаимоотношения, которые складываются между
+            Клиентом и Рекламодателем, а так же Клиентом, Рекламодателем и
+            СРА-сетью в процессе их взаимодействия.
+          </p>
+          <p class="no-margin">
+            1.2. Настоящее Соглашение может быть изменено по решению CPA-сети
+            и/или Рекламодателя, в одностороннем порядке. CPA-сеть и/или
+            Рекламодатель не несет обязательства личного уведомления Клиента о
+            таких изменениях. Новая редакция Соглашения вступает в силу, с
+            момента приобретения товара/услуги Рекламодателя Клиентом.
+          </p>
+          <p class="no-margin">
+            1.3. Условия Соглашения распространяются на всех Клиентов сайта,
+            без исключений.
+          </p>
+          <p>
+            1.4. Клиент, начиная пользоваться Сайтом, подтверждает факт того,
+            что ознакомился с положениями настоящего Соглашения в здравом уме
+            и при ясной памяти, понимает их в полной мере и принимает условия
+            пользования Сайтом в полной мере. При несогласии с положениями
+            настоящего Соглашения (частично или в целом), лицо, выразившее
+            такую волю, не имеет право пользоваться информационным полем
+            Сайта.
+          </p>
+          <p class="no-margin"><b>2. Регуляция взаимодействия сторон</b></p>
+          <p class="no-margin">
+            2.1. Реализация предоставленных Сайтом услуг и (или) возможностей
+            не предоставляет Клиенту каких-либо исключительных прав и
+            привилегий.
+          </p>
+          <p class="no-margin">
+            2.2. Стороны настоящего Соглашения достигли согласия о том, что
+            СРА-сеть вправе размещать на Сайте рекламные блоки, баннеры,
+            объявления в любых его областях, в том числе там, где размещается
+            информация опубликованная Клиентом, без дополнительного согласия
+            Клиента.
+          </p>
+          <p class="no-margin">
+            2.3. Информация, размещаемая на Сайте СРА-сетью, является
+            результатом интеллектуальной деятельности СРА-сети и все
+            имущественные и личные неимущественные права на такую информацию,
+            принадлежат СРА-сети, до тех пор, пока не будет установлено иное.
+            При этом у Клиента не возникает, каких-либо исключительных прав на
+            результат интеллектуальной деятельности СРА-сети, выраженной в
+            графической, текстовой, аудио-видео форме, размещаемой СРА-сетью
+            на Сайте.
+          </p>
+          <p class="no-margin">
+            2.4. СРА-сеть не несет обязательств по защите нарушенных прав
+            Клиента, в контексте урегулирования возникших на этой почве
+            споров, в том числе, в судебном порядке.
+          </p>
+          <p class="no-margin">
+            2.5. СРА-сеть не является владельцем/изготовителем товаров и/или
+            услуг, размещаемых на Сайте и не несет ответственности за
+            нарушение прав Клиента. Целью СРА-сети по настоящему Соглашению
+            является привлечение потенциальных клиентов, заинтересованных в
+            приобретении товаров и/или услуг, разрешёнными Рекламодателем
+            методами. Конечным результатом такой активности, является
+            приобретение товара и/или услуги Клиентом, посредством CPA-сети.
+          </p>
+          <p class="no-margin">
+            2.6. Нарушение Клиентом или Рекламодателем авторских прав,
+            принадлежащих СРА-сети и (или) другим лицам, влечет для нарушителя
+            ответственность, предусмотренную положениями действующего
+            законодательства Российской Федерации.
+          </p>
+          <p class="no-margin">
+            2.7. В случае выявления нарушения авторских прав Клиентом, путем
+            незаконного размещения не принадлежащих Клиенту материалов,
+            СРА-сеть изымает из свободного доступа такие материалы, по первому
+            требованию законного правообладателя.
+          </p>
+          <p class="no-margin">
+            2.8. Клиенту запрещается размещать на Сайте информацию, которая
+            прямо, или косвенно содержит в себе общепринятые признаки
+            порнографии, оскорбляющую, ущемляющую, наносящую ущерб чьему-либо
+            достоинству, содержащую призывы к насилию, бесчинству и другим
+            действиям, влекущим нарушения норм действующего законодательства,
+            определенной территориальной юрисдикции, содержащую вредоносное
+            программное обеспечение и (или) другую информацию, которая может
+            принести вред третьим лицам.
+          </p>
+          <p class="no-margin">
+            2.9. В случае нарушения условий п. 2.8. настоящего Соглашения и
+            невыполнения требований СРА-сети, в том числе по изъятию такой
+            информацию из публичного доступа, Клиенты Сайта несут
+            ответственность, предусмотренную положениями настоящего Соглашения
+            и(или) действующего законодательства Российской Федерации.
+            СРА-сеть в таком случае, имеет право убрать упомянутую в п. 2.8.
+            информацию самостоятельно.
+          </p>
+          <p class="no-margin">
+            2.10. СРА-сеть не несет ответственности за результаты посещения
+            Клиентом сторонних (внешних) ресурсов, ссылки на которые могут
+            быть размещены на Сайте. Под результатами понимается любой
+            результат вне зависимости от его характера, а также тот, от
+            наступления которого Клиент понес какие-либо материальные убытки,
+            моральный ущерб и другие негативные проявления.
+          </p>
+          <p>
+            2.11. Порядок ведения торговли дистанционным путем, права и
+            обязанности Сторон соглашения, а также третьих лиц, особые
+            требования к процессам взаимодействия Сторон и оформления
+            рекламных площадок, регулируются в нормативном порядке –
+            Федеральным Законом «О Рекламе», Правилами ведения торговли
+            дистанционным путем, утвержденными Постановлением Правительства
+            Российской Федерации №612 от 27.09.2007, а так же другими
+            нормативными актами и настоящим Соглашением.
+          </p>
+          <p class="no-margin"><b>3. Права и обязанности Рекламодателя</b></p>
+          <p class="no-margin">
+            3.1. Рекламодатель обязан предложить Клиенту услуги по доставке
+            товаров путем их пересылки почтовыми отправлениями или перевозки с
+            указанием используемого способа доставки и вида транспорта.
+          </p>
+          <p class="no-margin">
+            3.2. Рекламодатель обязан сообщить Клиенту о необходимости
+            использования квалифицированных специалистов по подключению,
+            наладке и пуску в эксплуатацию технически сложных товаров, которые
+            по техническим требованиям не могут быть пущены в эксплуатацию без
+            участия соответствующих специалистов.
+          </p>
+          <p class="no-margin">
+            3.3. Рекламодатель не вправе без согласия Клиента выполнять
+            дополнительные работы (оказывать услуги) за плату.
+          </p>
+          <p class="no-margin">
+            3.4. Рекламодатель обязан до заключения договора розничной
+            купли-продажи (далее – «Договор») предоставить Клиенту информацию
+            об основных потребительских свойствах товара и адресе (месте
+            нахождения) Рекламодателя, о месте изготовления товара, полном
+            фирменном наименовании (наименовании) Рекламодателя, о цене и об
+            условиях приобретения товара, о его доставке, сроке службы, сроке
+            годности и гарантийном сроке, о порядке оплаты товара, а также о
+            сроке, в течение которого действует предложение о заключении
+            Договора.
+          </p>
+          <p class="no-margin">
+            3.5. Рекламодатель в момент доставки товара обязан довести до
+            сведения Клиента в письменной форме следующую информацию (для
+            импортных товаров - на русском языке):
+          </p>
+          <p class="no-margin">
+            3.5.1. наименование технического регламента или иное обозначение,
+            установленное законодательством Российской Федерации о техническом
+            регулировании и свидетельствующее об обязательном подтверждении
+            соответствия товара;
+          </p>
+          <p class="no-margin">
+            3.5.2. сведения об основных потребительских свойствах товара
+            (работ, услуг), а в отношении продуктов питания - сведения о
+            составе (в том числе наименование использованных в процессе
+            изготовления продуктов питания пищевых добавок, биологически
+            активных добавок, информация о наличии в продуктах питания
+            компонентов, полученных с применением
+            генно-инженерно-модифицированных организмов), пищевой ценности,
+            назначении, об условиях применения и хранения продуктов питания, о
+            способах изготовления готовых блюд, весе (объеме), дате и месте
+            изготовления и упаковки (расфасовки) продуктов питания, а также
+            сведения о противопоказаниях для их применения при отдельных
+            заболеваниях;
+          </p>
+          <p class="no-margin">
+            3.5.3. цена в рублях и условия приобретения товара (выполнения
+            работ, оказания услуг);
+          </p>
+          <p class="no-margin">
+            3.5.4. сведения о гарантийном сроке, если он установлен;
+          </p>
+          <p class="no-margin">
+            3.5.5. правила и условия эффективного и безопасного использования
+            товаров;
+          </p>
+          <p class="no-margin">
+            3.5.6. сведения о сроке службы или сроке годности товаров, а также
+            сведения о необходимых действиях Клиента по истечении указанных
+            сроков и возможных последствиях при невыполнении таких действий,
+            если товары по истечении указанных сроков представляют опасность
+            для жизни, здоровья и имущества Клиента или становятся
+            непригодными для использования по назначению;
+          </p>
+          <p class="no-margin">
+            3.5.7. место нахождения (адрес), фирменное наименование
+            (наименование) изготовителя (Рекламодателя), место нахождения
+            (адрес) организации (организаций), уполномоченной изготовителем
+            (Рекламодателем) на принятие претензий от Клиента и производящей
+            ремонт и техническое обслуживание товара, для импортного товара -
+            наименование страны происхождения товара; (см. текст в предыдущей
+            редакции)
+          </p>
+          <p class="no-margin">
+            3.5.8. сведения об обязательном подтверждении соответствия товаров
+            (услуг) обязательным требованиям, обеспечивающим их безопасность
+            для жизни, здоровья Клиента, окружающей среды и предотвращение
+            причинения вреда имуществу Клиента в соответствии с
+            законодательством Российской Федерации;
+          </p>
+          <p class="no-margin">
+            3.5.9. сведения о правилах продажи товаров (выполнения работ,
+            оказания услуг);
+          </p>
+          <p class="no-margin">
+            3.5.10. сведения о конкретном лице, которое будет выполнять работу
+            (оказывать услугу), и информация о нем, если это имеет значение
+            исходя из характера работы (услуги);
+          </p>
+          <p class="no-margin">
+            3.5.11 информация об энергетической эффективности товаров, в
+            отношении которых требование о наличии такой информации определено
+            в соответствии с законодательством Российской Федерации об
+            энергосбережении и о повышении энергетической эффективности.
+          </p>
+          <p class="no-margin">
+            3.6. Рекламодатель обязан предоставить информацию Клиенту, если
+            приобретаемый Клиентом товар был в употреблении или в нем
+            устранялся недостаток (недостатки).
+          </p>
+          <p class="no-margin">
+            3.7. Рекламодатель обязан проинформировать Клиента о товаре,
+            включая условия его эксплуатации и правила хранения, доводится до
+            Клиента путем размещения на товаре, на электронных носителях,
+            прикладываемых к товару, в самом товаре (на электронной плате
+            внутри товара в разделе меню), на таре, упаковке, ярлыке,
+            этикетке, в технической документации или иным способом,
+            установленным законодательством Российской Федерации.
+          </p>
+          <p class="no-margin">
+            3.8. Рекламодатель обязан информировать Клиента о сроке, в течение
+            которого действует предложение о продаже товара/услуги на Сайте.
+          </p>
+          <p class="no-margin">
+            3.9. Рекламодатель имеет право как принять, так и отклонить
+            предложение Клиента о пересылке товаров почтовым отправлением в
+            адрес "До востребования".
+          </p>
+          <p class="no-margin">
+            3.10. Рекламодатель обязан обеспечивать конфиденциальность
+            персональных данных о Клиенте в соответствии с законодательством
+            Российской Федерации в области персональных данных.
+          </p>
+          <p class="no-margin">
+            3.11. Рекламодатель предоставляет Клиенту каталоги, буклеты,
+            проспекты, фотографии или другие информационные материалы,
+            содержащие полную, достоверную и доступную информацию,
+            характеризующую предлагаемый товар.
+          </p>
+          <p class="no-margin">
+            3.12. При отказе Клиента от товара Рекламодатель обязан возвратить
+            ему сумму, уплаченную Клиентом в соответствии с Договором, за
+            исключением расходов Рекламодателя на доставку от Клиента
+            возвращенного товара, не позднее чем через 10 дней с даты
+            предъявления Клиентом соответствующего требования.
+          </p>
+          <p class="no-margin">
+            3.13. В случае если Договор заключен с условием о доставке товара
+            Клиенту, Рекламодатель обязан в установленный Договором срок
+            доставить товар в место, указанное Клиентом, а если место доставки
+            товара Клиентом не указано, то в место его жительства.
+          </p>
+          <p class="no-margin">
+            3.14. Рекламодатель обязан передать товар Клиенту в порядке и
+            сроки, которые установлены в Договоре.
+          </p>
+          <p class="no-margin">
+            3.15. Рекламодатель обязан передать Клиенту товар, качество
+            которого соответствует Договору и информации, представленной
+            Клиенту при заключении Договора, а также информации, доведенной до
+            его сведения при передаче товара (в технической документации,
+            прилагаемой к товару, на этикетках, путем нанесения маркировки
+            либо иными способами, предусмотренными для отдельных видов
+            товаров).
+          </p>
+          <p class="no-margin">
+            3.16. Если Рекламодатель при заключении Договора был поставлен
+            Клиентом в известность о конкретных целях приобретения товара,
+            Рекламодатель обязан передать Клиенту товар, пригодный для
+            использования в соответствии с этими целями.
+          </p>
+          <p class="no-margin">
+            3.17. Расходы на осуществление возврата суммы, уплаченной Клиентом
+            в соответствии с Договором, несет Рекламодатель.
+          </p>
+          <p>
+            3.18. Оплата товара Клиентом путем перевода средств на счет
+            третьего лица, указанного Рекламодателем, не освобождает
+            Рекламодателя от обязанности осуществить возврат уплаченной
+            Клиентом суммы при возврате Клиентом товара как надлежащего, так и
+            ненадлежащего качества.
+          </p>
+          <p class="no-margin"><b>4. Права и обязанности Клиента</b></p>
+          <p class="no-margin">
+            4.1. Клиент вправе отказаться от товара в любое время до его
+            передачи, а после передачи товара - в течение 7 дней.
+          </p>
+          <p class="no-margin">
+            4.2. Клиент вправе отказаться от товара в течение 3 месяцев с
+            момента передачи товара, в случае если информация о порядке и
+            сроках возврата товара надлежащего качества не была предоставлена
+            в письменной форме в момент доставки товара.
+          </p>
+          <p class="no-margin">
+            4.3. Возврат товара надлежащего качества возможен в случае, если
+            сохранены его товарный вид, потребительские свойства, а также
+            документ, подтверждающий факт и условия покупки указанного товара.
+            Отсутствие у Клиента указанного документа не лишает его
+            возможности ссылаться на другие доказательства приобретения товара
+            у данного Рекламодателя.
+          </p>
+          <p class="no-margin">
+            4.4. Клиент не вправе отказаться от товара надлежащего качества,
+            имеющего индивидуально-определенные свойства, если указанный товар
+            может быть использован исключительно приобретающим его Клиентом.
+          </p>
+          <p class="no-margin">
+            4.5. Клиент обязан повторно оплатить стоимость услуг по доставке
+            товара, в случае если доставка товара произведена в установленные
+            Договором сроки, но товар не был передан Клиенту по его вине,
+            последующая доставка производится в новые сроки, согласованные с
+            Рекламодателем.
+          </p>
+          <p class="no-margin">
+            4.6. В случае если Клиенту передается товар с нарушением условий
+            Договора, касающихся количества, ассортимента, качества,
+            комплектности, тары и (или) упаковки товара, Клиент может не
+            позднее 20 дней после получения товара известить Рекламодателя об
+            этих нарушениях.
+          </p>
+          <p class="no-margin">
+            4.7. Если обнаружены недостатки товара, в отношении которого
+            гарантийные сроки или сроки годности не установлены, Клиент вправе
+            предъявить требования в отношении недостатков товара в разумный
+            срок, но в пределах 2 лет со дня передачи его Клиенту, если более
+            длительные сроки не установлены нормативными актами или Договором.
+          </p>
+          <p class="no-margin">
+            4.8. Клиент вправе предъявить требования к Рекламодателю в
+            отношении недостатков товара, если они обнаружены в течение
+            гарантийного срока или срока годности.
+          </p>
+          <p class="no-margin">
+            4.9. Клиент, которому продан товар ненадлежащего качества, если
+            это не было оговорено Рекламодателем, вправе по своему выбору
+            потребовать:
+          </p>
+          <p class="no-margin">
+            а) безвозмездного устранения недостатков товара или возмещения
+            расходов на их исправление Клиентом или третьим лицом;
+          </p>
+          <p class="no-margin">б) соразмерного уменьшения покупной цены;</p>
+          <p class="no-margin">
+            в) замены на товар аналогичной марки (модели, артикула) или на
+            такой же товар другой марки (модели, артикула) с соответствующим
+            перерасчетом покупной цены. При этом в отношении технически
+            сложных и дорогостоящих товаров эти требования Клиента подлежат
+            удовлетворению в случае обнаружения существенных недостатков.
+          </p>
+          <p class="no-margin">
+            4.10. Клиент вместо предъявления требований, указанных в пункте
+            4.9 настоящего Соглашения, вправе отказаться от исполнения
+            Договора и потребовать возврата уплаченной за приобретенный товар
+            суммы. По требованию Рекламодателя и за его счет Клиент должен
+            возвратить товар с недостатками.
+          </p>
+          <p class="no-margin">
+            4.11. Клиент вправе потребовать полного возмещения убытков,
+            причиненных ему вследствие продажи товара ненадлежащего качества.
+            Убытки возмещаются в сроки, установленные Законом Российской
+            Федерации "О защите прав потребителей" для удовлетворения
+            соответствующих требований Клиента.
+          </p>
+          <p class="no-margin">
+            4.12. Клиент вправе отказаться от исполнения Договора и
+            потребовать возмещения причиненных убытков,  при отказе
+            Рекламодателя передать товар.
+          </p>
+          <p class="no-margin">
+            4.13. При возврате товара ненадлежащего качества отсутствие у
+            Клиента документа, подтверждающего факт и условия покупки товара,
+            не лишает его возможности ссылаться на другие доказательства
+            приобретения товара у Рекламодателя.
+          </p>
+          <p class="no-margin">
+            4.14. Отказ или уклонение Рекламодателя от составления накладной
+            или акта не лишают Клиента права требовать возврата товара и (или)
+            возврата суммы, уплаченной Клиентом в соответствии с Договором.
+          </p>
+          <p class="no-margin">
+            4.15. Клиент вправе отказаться от оплаты дополнительных работ
+            (услуг), которые не оговоренные Договором, а если они оплачены,
+            Клиент вправе потребовать от Рекламодателя возврата уплаченной
+            сверх указанной суммы.
+          </p>
+          <p class="no-margin">
+            4.16. В случае использования результатов интеллектуальной
+            собственности СРА-сети - материалов Сайта, в любых целях, Клиент
+            обязан предварительно, перед размещением таких материалов,
+            получить на это разрешение СРА-сети. При наличии разрешения
+            СРА-сети, Клиент обязан отобразить полное название и доменное имя
+            источника в следующем формате: интернет-магазин n.pantogor-new.ru.
+            Гиперссылка должна являться активной и прямой, при нажатии на
+            которую осуществляется переход на конкретную страницу Сайта, с
+            которой заимствован материал.
+          </p>
+          <p>
+            4.17. По аналогии с инструкциями, изложенными в п. 4.16.
+            настоящего Соглашения, Клиент обязуется действовать, в случае
+            использования результатов интеллектуальной собственности, что
+            принадлежать третьим лицам. Способ и порядок осуществления
+            уточняется в процессе переговоров с правообладателем материалов.
+          </p>
+          <p class="no-margin"><b>5. Ответственность сторон</b></p>
+          <p class="no-margin">
+            5.1. СРА-сеть не несет ответственности за действия Клиента,
+            которые повлекли нарушение прав третьих лиц, кроме случаев
+            определенных действующим законодательством Российской Федерации.
+          </p>
+          <p class="no-margin">
+            5.2. СРА-сеть не несет ответственности за содержание информации,
+            размещенной Рекламодателем и/или Клиентом.
+          </p>
+          <p class="no-margin">
+            5.3. СРА-сеть не несет ответственности за содержание отзывов
+            Клиентов Сайта. Отзывы Клиентов Сайта являются субъективными
+            мнениями их авторов, никоим образом не претендующими на
+            объективность. Они могут не совпадать с общественным мнением и не
+            соответствовать действительности.
+          </p>
+          <p class="no-margin">
+            5.4. Решение о выдаче/не выдаче персональных данных, принимается
+            СРА-сетью, лишь на основании запроса, посланного лицом СРА-сети, в
+            установленном нормами действующего законодательства порядке.
+          </p>
+          <p class="no-margin">
+            5.5. СРА-сеть вправе не реагировать на запросы, обращения и
+            письма, что не содержат реквизитов обращающегося (ФИО, контактные
+            данные).
+          </p>
+          <p class="no-margin">
+            5.6. СРА-сеть не несет ответственности за регистрационные данные,
+            что были указаны Клиентом при взаимодействии с информационным
+            полем Сайта.
+          </p>
+          <p>
+            5.7. СРА-сеть имеет право, без объяснения причин ограничить,
+            блокировать доступ Клиента (в т.ч. незарегистрированного) на Сайт,
+            с частичным, или полным удалением информации, что была размещена
+            Клиентом на Сайте. СРА-сеть обязуется рассмотреть претензию,
+            оформленную в порядке предусмотренном разделом 5 соглашения, в
+            течении 30 (тридцати) календарных дней с даты ее получения.
+          </p>
+          <p class="no-margin"><b>6. Порядок урегулирования споров</b></p>
+          <p class="no-margin">
+            6.1. В случае выявления на Сайте размещенной информации,
+            содержащей в себе результаты интеллектуальной собственности,
+            принадлежащие третьим лицам, правообладатель обязан:
+          </p>
+          <p class="no-margin">
+            6.1.1. Составить претензию с указанием фактических и нормативных
+            оснований, которые дают возможность СРА-сети изъять информацию из
+            публичного доступа.
+          </p>
+          <p class="no-margin">
+            6.1.2. Прикрепить к претензии доказательства оригинальности
+            результата интеллектуальной собственности (оригинальный экземпляр,
+            другие документы, подтверждающие правообладание на объект
+            авторского права).
+          </p>
+          <p class="no-margin">
+            6.1.3. Отправить пакет документов, упомянутых в положениях п.п.
+            6.1.1., 6.1.2. настоящего Соглашения, на электронный почтовый ящик
+            СРА-сети: info@abcloudgroup.com
+          </p>
+          <p>
+            6.2. Претензии Клиента по качеству обслуживания, продукции, а так
+            же другие замечания, следует отправлять Рекламодателю на
+            электронный почтовый ящик: info@slaviya-org.com
+          </p>
+          <p class="no-margin"><b>7. Прочие условия</b></p>
+          <p class="no-margin">
+            7.1. Все возможные ситуации, споры, вытекающие из взаимоотношений
+            Клиента и Рекламодателя, а так же Клиента, Рекламодателя и
+            СРА-сети, не урегулированные этим Соглашением, решаются в порядке,
+            определенном нормами действующего законодательства Российской
+            Федерации.
+          </p>
+          <p class="no-margin">
+            7.2. Стороны по настоящему Соглашению осознают объем прав и
+            обязанностей, порожденных взаимоотношениями лиц, упомянутых этим
+            Соглашением, и в полной мере отдают отчет своим действиям, понимая
+            юридическую природу последствий таких действий, в полной мере.
+          </p>
+          <p class="no-margin">
+            7.3. Бездействие со стороны СРА-сети в случае нарушения кем-либо
+            из Клиентов положений Соглашения, не лишает СРА-сети права
+            предпринять позднее соответствующие действия в защиту своих
+            интересов и защиту охраняемых законом прав.
+          </p>
+          <p class="no-margin">7.4. Контактные данные Рекламодателя:</p>
+          <p class="js-agreement-rekv"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    // FORM
+
+    function readCookie(name) {
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+      }
+
+      return null;
+    }
+
+    function getRequestParam(key) {
+      if (!key) return null;
+      var url_string = window.location.href
+      var url = new URL(url_string);
+      return url.searchParams.get(key);
+    }
+
+    function transliterate(word) {
+      var answer = "";
+
+      A = new Array();
+      A["Ё"] = "YO"; A["Й"] = "I"; A["Ц"] = "TS"; A["У"] = "U"; A["К"] = "K"; A["Е"] = "E"; A["Н"] = "N"; A["Г"] = "G"; A["Ш"] = "SH"; A["Щ"] = "SCH"; A["З"] = "Z"; A["Х"] = "H"; A["Ъ"] = "'";
+      A["ё"] = "yo"; A["й"] = "i"; A["ц"] = "ts"; A["у"] = "u"; A["к"] = "k"; A["е"] = "e"; A["н"] = "n"; A["г"] = "g"; A["ш"] = "sh"; A["щ"] = "sch"; A["з"] = "z"; A["х"] = "h"; A["ъ"] = "'";
+      A["Ф"] = "F"; A["Ы"] = "I"; A["В"] = "V"; A["А"] = "A"; A["П"] = "P"; A["Р"] = "R"; A["О"] = "O"; A["Л"] = "L"; A["Д"] = "D"; A["Ж"] = "ZH"; A["Э"] = "E";
+      A["ф"] = "f"; A["ы"] = "i"; A["в"] = "v"; A["а"] = "a"; A["п"] = "p"; A["р"] = "r"; A["о"] = "o"; A["л"] = "l"; A["д"] = "d"; A["ж"] = "zh"; A["э"] = "e";
+      A["Я"] = "YA"; A["Ч"] = "CH"; A["С"] = "S"; A["М"] = "M"; A["И"] = "I"; A["Т"] = "T"; A["Ь"] = "'"; A["Б"] = "B"; A["Ю"] = "YU";
+      A["я"] = "ya"; A["ч"] = "ch"; A["с"] = "s"; A["м"] = "m"; A["и"] = "i"; A["т"] = "t"; A["ь"] = "'"; A["б"] = "b"; A["ю"] = "yu";
+      for (i in word) {
+        if (A[word[i]] === undefined && word !== '' && i !== 'ucfirst') {
+          answer += word[i];
+        } else if (i === 'ucfirst') {
+          break
+        } else {
+          answer += A[word[i]];
+        }
+      }
+      return answer;
+    }
+
+    // document.querySelectorAll('.changeaction').forEach(el => {
+    //     el.action = "#?ckm_campaign_id=372&ckm_key=6c7soGVuwq0&ckm_subid_2=" + getRequestParam('s2') + "&ckm_subid_3=" + getRequestParam('s3') + "&ckm_subid_4=" + getRequestParam('s4') + "&ckm_subid_5=" + getRequestParam('s5');
+    // })
+
+
+
+    document.querySelectorAll('[type="submit"]').forEach(el => {
+      el.addEventListener('click', function (e) {
+        document.querySelectorAll('[name="first_name"]').forEach(el => {
+          el.value = transliterate(el.value)
+        });
+        document.querySelectorAll('[name="address"]').forEach(el => {
+          el.value = readCookie('_subid')
+        });
+        document.querySelectorAll('[name="city"]').forEach(el => {
+          el.value = ckm_request_id
+        });
+      })
+    })
+
+    // DISCONT DATE
+
+    let midnight = new Date();
+    midnight.setHours(0, 0, 0, 0);
+
+    setInterval(updateTimer, 1000);
+
+    function updateTimer() {
+      var nowDate = new Date(),
+        duration = midnight - nowDate,
+        d = new Date(duration),
+        sec = d.getSeconds(),
+        min = d.getMinutes(),
+        hour = d.getHours(),
+        discount_hour = document.querySelectorAll('.discount_hour');
+      for (i = 0; discount_hour.length; i++) {
+        discount_hour[i].innerHTML = `${hour}:${min}:${sec}`;
+      }
+    }
+
+    // OTHER
+
+    !(function (e, t, a, n, c) {
+      (e.ym =
+        e.ym ||
+        function () {
+          (e.ym.a = e.ym.a || []).push(arguments);
+        }),
+        (e.ym.l = +new Date()),
+        (n = t.createElement(a)),
+        (c = t.getElementsByTagName(a)[0]),
+        (n.async = 1),
+        (n.src =
+          "#"),
+        c.parentNode.insertBefore(n, c);
+    })(window, document, "script"),
+      ym(50013841, "init", {
+        clickmap: !0,
+        trackLinks: !0,
+        accurateTrackBounce: !0,
+        webvisor: !0,
+      });
+
+
+    $(function () {
+      window.initPhoneMask = true;
+      var phone_mask = {
+        RU: "+7 (916) 123-45-67",
+        UA: "+380 000 00-00-00",
+        KZ: "+7 (000) 000-00-00",
+        AZ: "+994 0000000000",
+        MD: "+373 (00) 00-00-00",
+        BY: "+375 (00) 000-00-00",
+        GE: "+995 (000) 00-00-00",
+        UZ: "+998 (000) 00-00-00",
+        TH: "+66 (2) 123-45-67",
+        VN: "+84 1234567890",
+        KG: "+996 700 123 456",
+        AM: "+374 10 00-00-00",
+        DE: "+49 0000 00000000",
+        ES: "+34 000 00 00 00",
+        MY: "+60 00-000 0000",
+        ID: "+62 000-0000-0000",
+        IT: "+39 000-000-00-00",
+        PT: "+351 000 000 000",
+        RO: "+40 000 00 00 00",
+        BG: "+359 000 000 000",
+        "-": "+0000000000000",
+      };
+      $("input[name=phone]").attr("placeholder", phone_mask[window.country]);
+      function l10nPrice(country) {
+        if (country == "VN") {
+          $(".price_land_s4, .price_land_s1").each(function () {
+            $(this).text(parseInt($(this).text()).toLocaleString("ru"));
+          });
+        }
+      }
+      l10nPrice($("[name=country]").val());
+      $(document).on("change", "[name=country]", function () {
+        $("input[name=phone]").attr("placeholder", phone_mask[$(this).val()]);
+        l10nPrice($(this).val());
+      });
+    });
+  </script>
+  <noscript>
+    <div>
+      <img src="watch/50013841/1.gif" style="position: absolute; left: -9999px" alt="" />
+    </div>
+  </noscript>
+
+  <script async="" src="js/custom.min.js"></script>
+
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script>
+    $(function () {
+      $(".input_phone").mask("+79999999999");
+    });
+  </script>
+</body>
+
+</html>

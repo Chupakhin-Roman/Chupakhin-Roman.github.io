@@ -1,0 +1,117 @@
+.name, .phone, .email, .arrow2, .arrow3, .baks, .cap, .circle, .clock, .f, .gear-wheel, .google+, .linked, .rocket, .step1, .step2, .step3, .step4, .twiter{
+	background: url(sprites.png) no-repeat;
+}
+
+.name{
+	background-position: -7.991477966308594px -1.9914779663085938px ;
+	width: 13px;
+	height: 15px;
+}
+
+.phone{
+	background-position: -38.991477966308594px -0.9914779663085938px ;
+	width: 13px;
+	height: 14px;
+}
+
+.email{
+	background-position: -70.99713897705078px -2.9914779663085938px ;
+	width: 16px;
+	height: 13px;
+}
+
+.arrow2{
+	background-position: -172.99713897705078px -92.99713897705078px ;
+	width: 129px;
+	height: 33px;
+}
+
+.arrow3{
+	background-position: -341.99146270751953px -80.98294830322266px ;
+	width: 128px;
+	height: 32px;
+}
+
+.baks{
+	background-position: -608.9971389770508px -0.9971389770507812px ;
+	width: 31px;
+	height: 55px;
+}
+
+.cap{
+	background-position: 0 -88.99713897705078px ;
+	width: 62px;
+	height: 44px;
+}
+
+.circle{
+	background-position: -2.9942703247070312px -29.991477966308594px ;
+	width: 47px;
+	height: 47px;
+}
+
+.clock{
+	background-position: -551.9744338989258px -1px ;
+	width: 45px;
+	height: 46px;
+}
+
+.f{
+	background-position: -130.99713897705078px -81.99713897705078px ;
+	width: 8px;
+	height: 18px;
+}
+
+.gear-wheel{
+	background-position: -488.99146270751953px 0;
+	width: 47px;
+	height: 48px;
+}
+
+.google{
+	background-position: -67.98578643798828px -36.994300842285156px ;
+	width: 18px;
+	height: 18px;
+}
+
+.linked{
+	background-position: -99.98578643798828px -80.98011016845703px ;
+	width: 16px;
+	height: 16px;
+}
+
+.rocket{
+	background-position: -420.9971389770508px -4.997138977050781px ;
+	width: 50px;
+	height: 51px;
+}
+
+.step1{
+	background-position: -338.9971389770508px 0;
+	width: 71px;
+	height: 61px;
+}
+
+.step2{
+	background-position: -192.99713897705078px 0;
+	width: 51px;
+	height: 66px;
+}
+
+.step3{
+	background-position: -95.99713897705078px 0;
+	width: 82px;
+	height: 61px;
+}
+
+.step4{
+	background-position: -257.9971389770508px 0;
+	width: 69px;
+	height: 67px;
+}
+
+.twiter{
+	background-position: -66.99431610107422px -70.9914779663086px ;
+	width: 16px;
+	height: 15px;
+}

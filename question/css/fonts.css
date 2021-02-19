@@ -1,0 +1,11 @@
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url("../fonts/OpenSans-Regular.bin")/*tpa=http://salenewtovar.ru/r1-ecoslim16/index_files/OpenSans-Regular.ttf*/;
+  font-weight: 400
+}
+
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url("../fonts/OpenSans-Bold.bin")/*tpa=http://salenewtovar.ru/r1-ecoslim16/index_files/OpenSans-Bold.ttf*/;
+  font-weight: 400
+}

@@ -1,0 +1,47 @@
+.discount_hour{
+    color: #ff0000;
+    font-size: 26px;
+    font-weight: 800;
+    margin-top: 6px;
+}
+.form-p{
+    color: #000;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.comment_img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 30px;
+
+}
+.comment{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+.comment_1,.comment_2,.comment_3{
+    width: 45%;
+    margin: 20px;
+}
+.comment_p{
+    margin-top: 10px;
+    font-size: 16px;
+}
+.bottom-form{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.distinction-img img{
+    width: 227px;
+    height: 227px;
+    border-radius: 50%;
+}
+@media(max-width:860px){
+    .comment_1,.comment_2,.comment_3{
+        width: 100%;
+    }
+}
