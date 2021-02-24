@@ -2816,9 +2816,7 @@ option{
     z-index: 2;
     width: 60px;
 }
-#banner .h2{
-margin-bottom:15px;
-}
+
 @media(max-width:736px){
 	.gallery .image img{
 		max-height: 250px;
